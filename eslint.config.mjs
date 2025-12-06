@@ -10,7 +10,12 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  // Semua aturan lint dihapus
+  ...compat.config({
+    extends: [
+      "next/core-web-vitals",
+      "plugin:@typescript-eslint/recommended",
+    ],
+  }),
 ];
 
 export default eslintConfig;
