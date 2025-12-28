@@ -123,7 +123,7 @@ export default function PomoTimer() {
 
     const switchMode = (newMode : timerMode) => {
         setMode(newMode);
-        setTimerLeft(modeConfig[mode].duration);
+        setTimerLeft(modeConfig[newMode].duration);
         setIsRunning(false);
     }
 
@@ -183,7 +183,7 @@ export default function PomoTimer() {
                                     <circle
                                     cx="50"
                                     cy="50"
-                                    r="40"
+                                    r="45"
                                     strokeWidth="8"
                                     fill="none"
                                     stroke="white"
