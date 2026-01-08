@@ -7,25 +7,16 @@ import { useRef } from "react";
 
 export default function Footer() {
      const items = [{
-        name:"Home", item:"/"
+        name:"https://simpleicons.org/icons/instagram.svg", item:"https://www.instagram.com/fti25itb/"
     },
     {
-        name:"About Us", item:"/aboutus"
+        name:"https://simpleicons.org/icons/tiktok.svg", item:"https://www.tiktok.com/@fti25itb?_t=ZS-8wiuCXCE6qd&_r=1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn9_XUFG2n2KIVuVfFT7YEhlMwY1WRURxV9N2aFwrJe99q1uvEFrp11qoio9U_aem_QnQ5L1Rjpi2_izQqBUbYQQ"
     },
     {
-        name:"Library", item:"/library"
+        name:"https://simpleicons.org/icons/youtube.svg", item:"https://www.youtube.com/@AkademikBPAFTI25/videos"
     },
     {
-        name:"Major", item:"/major"
-    },
-    {
-        name:"Calc", item:"/gpa"
-    }, 
-    {
-        name:"PomoTimer", item:"/pomo",
-    },
-    {
-        name:"Contact Us", item:"/contact"
+        name:"https://simpleicons.org/icons/whatsapp.svg", item:"https://www.youtube.com/@AkademikBPAFTI25/videos"
     },
 ]
 
@@ -42,11 +33,11 @@ export default function Footer() {
                         </div>
                     </div>
                     <div>
-                        <h3 className="font-semibold text-xl text-white">Content</h3>
-                        <div className="space-y-2 grid grid-cols-3">
+                        <h3 className="font-semibold text-xl text-white px-7">Contact Us</h3>
+                        <div className="gap-5 grid grid-cols-4">
                             {items.map((item, index) => (
                                 <div className="cursor-pointer" key={index}>
-                                    <Link href={item.item} className="text-white/20 hover:text-white">{item.name}</Link>
+                                    <Link href={item.item} className="w-2"><img src = {item.name}></img></Link>
                                 </div>
                             ))}
                         </div>
