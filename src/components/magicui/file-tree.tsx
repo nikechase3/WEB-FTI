@@ -325,7 +325,7 @@ const File = forwardRef<
         onClick={() => selectItem(value)}
         {...props}
       >
-        {fileIcon ?? <FileIcon className="size-4" />}
+        {fileIcon ?? <FileIcon className="size-4 flex-shrink-0" />}
         {children}
       </button>
     );

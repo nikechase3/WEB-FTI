@@ -11,22 +11,21 @@ export const Embed = ({header,embed,footer}: forembed) => {
     return(
         <div style={{
             padding: '8px',
-            backgroundColor: 'white',
+            backgroundColor: '#030712ff',
             display: 'flex',
             flexDirection: 'column', 
             justifyContent: 'center', 
             alignItems: 'center', 
             margin:'0 auto',
-            marginLeft: '20%',
-            marginRight: '20%',
-            borderRadius: '16px'
+            marginLeft: '2%',
+            marginRight: '2%',
+            borderRadius: '16px',
+            height: '100%'
         }}>
-            <h1 style = {{color: 'black', margin: '8px'}}>{header}</h1>
+            <h1 style = {{color: 'white', margin: '8px'}}>{header}</h1>
            <iframe    
                 src = {embed}
-                width = '75%'
-                height = '400px'
-                style = {{border: 'none'}}
+                style = {{border: 'none',flex: '1', height: '100%', width: '100%'}}
             />
             <p style = {{color: 'black', margin: '8px'}}>{footer}</p>
         </div>
@@ -40,9 +39,10 @@ type forbox = {
     subtitle: string;
     button: string;
     kode: string;
+    id: number;
 }
 
-export const Box = ({image, title, subtitle, button, kode}: forbox) => {
+export const Box = ({image, title, subtitle, button, kode, id}: forbox) => {
     return(
         <div style={{
             padding: '10px',
