@@ -44,7 +44,7 @@ export default function Page() {
     
     const [Url, SetUrl] = useState("");
     const [Title, SetTitle] = useState("");
-
+    const [isOpen, setIsOpen] = useState(false);
     const renderTree = (elements: any[]) => {
         return elements.map((element) => {
 
@@ -72,17 +72,23 @@ export default function Page() {
     );
     }
     return (
-    <div className="pt-21 min-h-screen bg-gray-900 text-white p-6 flex gap-2">
-      
+    <div className="pt-21 min-h-screen bg-gray-900 text-white p-6 flex gap-2">    
       {/* LEFT: Navigation Tree */}
-      <div className="w-1/3 border border-gray-700 rounded-lg p-4 bg-gray-950 h-[85vh] overflow-y-auto">
-         <h2 className="text-xl font-bold mb-4 border-b border-gray-800 pb-2">Daftar Materi</h2>
-         
-         <Tree initialSelectedId="1" indicator={true} elements={data}>
-            {/* This command actually draws the data on screen */}
-            {renderTree(data)}
-         </Tree>
-      </div>
+      <div className='border border-gray-700 rounded-lg p-4 bg-gray-950 h-[85vh] overflow-y-auto $className={isOpen ? "w-1/3" : "w-20"}'>
+        <button onClick={() => setIsOpen(!isOpen)}
+        className="text-white">
+            <svg className = "w-6 h-6" fill="None" stroke="white" viewBox = "0 0 24 24">
+                <path strokeLinecap="round" strokeWidth = {2} d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+        <div className={isOpen ? "block" : "hidden"}>
+            <h2 className="text-xl font-bold mb-4 border-b border-gray-800 pb-2">Daftar Materi</h2>
+
+            <Tree initialSelectedId="1" indicator={true} elements={data}>
+                {/* This command actually draws the data on screen */}
+                {renderTree(data)}
+            </Tree>
+        </div>
 
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
@@ -99,6 +105,7 @@ export default function Page() {
          )}
       </div>
 
+    </div>
     </div>
   );
 }

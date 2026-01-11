@@ -215,7 +215,7 @@ export default function Page() {
       category: ["TI","MR"],
       kode: "TI1202",
       image: "https://static.wikia.nocookie.net/gup/images/e/e2/Semovente.png/revision/latest/top-crop/width/200/height/150?cb=20170206094231",
-      title: "Gamabr Teknik",
+      title: "Gambar Teknik",
       subtitle: "Teknik Industri",
     },
   ];
@@ -243,7 +243,7 @@ export default function Page() {
             <option className = "bg-gray-700" value = "TP">Teknik Pangan</option>
             </select>
         </div>
-        <div className = "grid grid-cols-4 gap-4 p-4">
+        <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
         {filteredData.map((item) => (
            <Box
                 kode = {item.kode}
