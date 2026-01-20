@@ -129,6 +129,7 @@ export default function Page() {
                 {renderTree(data)}
             </Tree>
         </div>
+    </div>
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -144,6 +145,5 @@ export default function Page() {
          )}
       </div>
          </div>
-    </div>
   );
 }

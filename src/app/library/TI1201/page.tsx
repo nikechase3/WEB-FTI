@@ -20,25 +20,30 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
+    folder("PPT Dosen", [
+        pdf("1-Pendahuluan 2024-2025.pdf", "1t6Ldz0SRNXJPSnhnyIhkFIoq7EmShMfd"),
+        pdf("2-The Chemical Context and The Molecular Diversity of Life.pdf", "1WstzyU5CmskoaF3FwZWIKxz-hG104SCT"),
+        pdf("3-Cell structure and function.pdf", "1XbnG5CTW_xkDJikHcc18KgK6ofjgtMtD"),
+        pdf("4-Genetika dan Evolusi.pdf", "1zgPZO6V9nA44M18mvtqs9LbBQIps8kgn"),
+        pdf("5-Sel, Genetika Dasar Kehidupan, dan Implikasinya terhadap Keselamatan di Tempat Kerja.pdf", "1V9a0JRmxa-f1UD2vchzV-WStgSb7z8bH"),
+        pdf("6-Musculoskeletal System.pdf", "1e5SgkwJ36QXzFAHRaAWvX8gmuNqdh0NI"),
+        pdf("7-Digestion, Respiration and Circulation.pdf", "1FaqAEblldq6oYgA7yD1Va7GxBPRz8E0-"),
+        pdf("8-Osmoregulation, Secretion, Immune and Nervous System.pdf", "16CGFTQircHfYuhpTzKh9nrWfECVVa7PT"),
+        pdf("9-Principle of Ecology.pdf", "1HLXzedtP_MAfREjaKMNqON7S8nnv74Mo"),
+        pdf("10-Evolution and Adaptation.pdf", "1d8Qt3o5Bd-TlFmm0LZoAH-Xb7pCwb0kP"),
     ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
+    folder("Catatan", [
+        pdf("Rangkuman UTS.pdf", "11Yl8y2fgawNYwA11Zpsuu4thMAu50LkG"),
+        pdf("Rangkuman UAS.pdf", "1G69BJU1MM16qhBqrOaAvgZ2-DRWVH366"),
     ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
+    folder("UTS", [
+        pdf("TI1201 - UTS 2024_2025 - Soal PIlihan Ganda.pdf", "1MiEMx5297e-Z0Mx_5rjFdaZZpwGe0vDd"),
+    ]),
+    folder("UAS", [
+        pdf("TI1201 - UAS 2024_2025 - Soal.pdf", "1TaznlBKBR88q2kVHEZ6b6aS5uUxh72NF"),
+    ]),
+    folder("Tugas PPT", [
+        pdf("Optimalisasi Penerapan Ilmu Biologi dalam Industri Sebagai Upaya Mitigasi Risiko Paparan Kadmium pada Pekerja Bengkel.pdf", "18OR3gZX9q3cQsc3_ZKA1qI0iUqnWHLjv"),
     ]),
     ];
     
@@ -90,6 +95,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +112,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }

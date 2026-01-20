@@ -133,7 +133,7 @@ export default function Page() {
     {
       id: 16,
       category: ["TP","TB"],
-      kode: "KI1202",
+      kode: "KI1201",
       image: "https://static.wikia.nocookie.net/gup/images/e/e2/Semovente.png/revision/latest/top-crop/width/200/height/150?cb=20170206094231",
       title: "Kimia Dasar 2B",
       subtitle: "Kimia",

@@ -20,26 +20,34 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
-    ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
-    ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
-    ]),
+        folder("MATERI", [
+            pdf("PG1202_Dasar Mikrobiologi Pangan.pdf", "1Yaa4YtADzAOsB7bjyiyGj_Swynk6JN_4"),
+            pdf("PG1202_Bakteri Ragi Jamur.pdf", "1iUgoq0lxqRE2P772-_xQKiBtNE9fUHHK"),
+            pdf("PG1202_Jamur.pdf", "1T9J_j2CkuCY2rgxP-UiY66Y59rtWSJLP"),
+            pdf("PG1202_Pertumbuhan Mikroba.pdf", "1HR7ohWQABnJmcIM4qyKlTSII7ndw4FHt"),
+            pdf("PG1202_Food Spoilage.pdf", "17avPHyhJ0ShR_CW8X7tTiQjx_Lzkj-jK"),
+            pdf("PG1202_Foodborne Disease.pdf", "1FhF8V3ijdkMKJro719jdO_W-Iy98xrln"),
+            pdf("PG1202_Mikrobiologi Industri (Materi TK).pdf", "1WbY2USNNztROBmOtafTdVJPSXYCzqnnY"),
+        ]),
+        folder("PRAKTIKUM", [
+            pdf("PG1202_Petunjuk Praktikum Mikpang 2025pdf.pdf", "1Y45-ctNKJMdOsqKw67ikxxd6LGMK-7xA"),
+        ]),
+        folder("UJIAN", [
+            folder("RINGKASAN DAN SIMULASI UTS UAS", [
+                pdf("RANGKUMAN MIKROBIOLOGI PANGAN UTK UTS.pdf", "1v7bRgTNQJ_n3oLNpDm01bAaH7fVpgztx"),
+                pdf("RINGKASAN PPT KEL DAN SIMULASI UAS MIKPANG .pdf", "1PFVw15SN97zS74Inv1O0LaQHK-Q8Dp87"),
+            ]),
+            folder("SOAL UJIAN TAHUN SEBELUMNYA", [
+                folder("UTS", [
+                    pdf("Soal UTS 2022 mikpang.pdf", "15rfyKagT4kwmwbiSwxXBHRpJ0mR80P3-"),
+                    pdf("UTS 23 mikpang jawab louisa ed.pdf", "1dlqe1eYPo9HRTlpGSoQbqg-b5qiuq-fq"),
+                    pdf("Notes UTS Mikpang edited.pdf", "1ecIwCFe6zuZbLXdf75R3xXPm_qQxKXVq"),
+                ]),
+                folder("UAS", [
+                    pdf("SOAL UAS TAHUN SEBELUMNYA YG NYAMBUNG.pdf", "1U5SxHn1jLq7avx_ev4iNBMO5uhKwKOeE"),
+                ]),
+            ]),
+        ]),
     ];
     
     const [Url, SetUrl] = useState("");
@@ -90,6 +98,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +115,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }

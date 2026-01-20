@@ -20,25 +20,18 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
+    folder("Buku Referensi", [
+        pdf("University Physics with Modern Physics 15th Edition", "1-7rjkXl6Sh0pfCW6wmw5fVKCiotka31p"),
+        pdf("Mechanics of Materials 7th.pdf", "1vHXen_We29d8YkCxN8BcW2XpEP7JMDil"),
     ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
-    ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
+    folder("PPT", [
+        pdf("w1-pengantar_kekuatan_material-I.pptx", "1QcNXPLbgxRV70RdeDYhmJfgRIgrK4nbc"),
+        pdf("w2-pengantar_kekuatan_material-II.pptx", "1AxqbuvUQ99quz6NRD0qWJs2Xh-BBo6QB"),
+        pdf("w3-5-Gelombang_mekanis.pptx", "1EaoyHK3KKobqfiHu_Q_m0HXw2CzzQ_3b"),
+        pdf("w9 - Pengantar Laju Proses.pdf", "1RBFRUlH6P3TIjimk8_HSSO8Qm3gns1vs"),
+        pdf("w10&11 - Pengantar Elektrik.pdf", "1nw33ns5j5l6ql2HIHeU7fI4FgetfdSxx"),
+        pdf("w12-13-Optika.pdf", "1rZkXytTlufz0t-Lwq6H3u9wdXweuDQvy"),
+        pdf("w16-Pengantar-Fisika-Modern.pdf", "1FXTQkCJMyv4d1Yq3-_aEAer8ljEptdoR"),
     ]),
     ];
     
@@ -90,6 +83,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +100,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }

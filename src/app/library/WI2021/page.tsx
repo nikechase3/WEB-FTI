@@ -20,26 +20,29 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
-    ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
-    ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
-    ]),
+        folder("MANAJEMEN REKAYASA INDUSTRI", [
+            folder("PPT DOSEN", [
+                pdf("Minggu 2 - Evolusi Manajemen.pdf", "1Z6J16cpwn-2bqwjRsO4slwDz4268vVG9"),
+                pdf("Minggu 3 - Strategic Planning.pdf", "1pgzs-tyn5qtowO8VbzWIXos0FVNngSwv"),
+                pdf("Minggu 4 - Organizing.pdf", "1_ZnL8mTKrL5mHBtdaeBd_DwyUieG5aiv"),
+                pdf("Minggu 5 - Kepemimpinan.pdf", "1AYXSvWoQXvgusAtjuxkG4SzwJY5ydss9"),
+                pdf("Minggu 6 - Controlling.pdf", "1OzrFbvae9Am4IZn3XkBqWraPWsIfNc9t"),
+            ]),
+            folder("CATATAN", [
+                pdf("Bab 2 - Evolusi Manajemen.docx", "1YiCUdY2kcLOQNLwV2-Yd1lrYenPHqaSv"),
+                pdf("Bab 3 - Strategic Planning.docx", "17IGO5_66Rp_6dnqiGMLU7JZHWEjKIdfT"),
+                pdf("Bab 4 - Organizing.docx", "1C-cL2sCEDWrPBuLwa9Av61tUEoad7BJP"),
+                pdf("Bab 5 - Kepemimpinan.docx", "1zFRUWaYv0kMgpJz7snJEjuXEe89yO1CO"),
+                pdf("Bab 6 - Controlling.docx", "1KZ1M_BCMOumNTKaBc0SeUoqAJyM8lY1h"),
+            ]),
+            folder("UTS", [
+                pdf("SOAL UTS 2024 (seinget gua).docx", "1D30F1guDEWZwn9ave0yDDebHNnPUqYno"),
+            ]),
+            folder("UAS", [
+                pdf("Soal UAS MRI 2024.docx", "1JpOjLhX5YV3U4XYf4HYQsCLiojVFBqb8"),
+                pdf("Rangkuman UAS MRI 2024.docx", "1Xz2D-AqgwuB5gf9ml20bil1RA-fm5lyn"),
+            ]),
+        ])
     ];
     
     const [Url, SetUrl] = useState("");
@@ -90,6 +93,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +110,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }

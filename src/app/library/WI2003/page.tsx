@@ -20,26 +20,25 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
-    ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
-    ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
-    ]),
+        folder("TATA TERTIB", [
+            pdf("TATA TERTIB PELAKSANAAN MKOR WI2003 SEMESTER II 2024/2025.pdf", "1huKMI5WJjdTDR0SxuxpVrxfq-Vtsl7dy"),
+        ]),
+        folder("PPT DOSEN", [
+            pdf("Pengantar Olahraga Semester II 2024/2025.pdf", "1yzgqxc3y4WqDhWh_a0b7hakcFUcghvXe"),
+            pdf("PPT Pertemuan-1-Teori-2024/2025pdf.pdf", "1qrjlIncNfcSuXPDefvGEhNdjQmcKwOat"),
+        ]),
+        folder("CATATAN", [
+            pdf("Rangkuman FTI 2022.pdf", "15t0iE3_ZfmRK1pl9hk91mvItW0W2SMHm"),
+        ]),
+        folder("UAS", [
+            pdf("UAS Teori Olahraga 2023-2024.pdf", "1qPOzJFuHq8bJfTdpb2dQUf_RFcVZ0g_x"),
+            pdf("UAS Teori Olahraga 2022-2023 Part 1.pdf", "1eIydxS5-GZZG7e2hm3-kjI2ZinHlTgi8"),
+            pdf("UAS Teori Olahraga 2022-2023 Part 2.pdf", "1P47-cP6DV8XVlypk80IFRtb2qSKmS5pw"),
+            pdf("UAS Teori Olahraga 2022-2023 Part 3.pdf", "1atE5pAFBn2UWJqg9ljIYzR8pGMWdS8uU"),
+        ]),
+        folder("PUSTAKA", [
+            pdf("Physiology of Sport and Exercise - 3rd Ed", "1sAeoj68kd_FEexF-i2HtwYfRlI4LYhHk"),
+        ]),
     ];
     
     const [Url, SetUrl] = useState("");
@@ -90,6 +89,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +106,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }

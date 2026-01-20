@@ -20,26 +20,36 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
-    ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
-    ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
-    ]),
+        folder("RPMK & SILABUS", [
+            pdf("1739778753107_[FINAL]-RPMK-&-SIlabus-MKWI-Literasi-Data-dan-IA.pdf", "1aGG1-nVD0kgCRnGqxwap6MSfjNLBPJKI"),
+        ]),
+        folder("PPT DOSEN", [
+            pdf("Materi 0. Pengantar Perkuliahan.pdf", "1_SEGentXDq9_e9PCXcF_x8CvqYIqPeik"),
+            pdf("Materi 1a. Pengenalan Literasi Data dan IA.pdf", "1FwWZGzuQh2OYBfiI78Hz8WAtWUBYgPoj"),
+            pdf("Materi 1b. Intelligent Agent.pdf", "1062Bc9Pp-UxFp7uuybuUtYBXLML0XXIC"),
+            pdf("Materi 2. Konsep Penting Literasi Data.pdf", "10_UWuraotcmfPSIRX2JS2wLyDmF4zFtz"),
+            pdf("Materi 3. Exploratory data analysis Statistika deskriptif numerik.pdf", "1ScipcQTCoWzbj7fL2Cnc0X7D5Wx5GuA_"),
+            pdf("Materi 4. EDA visualisasi.pdf", "13i6H_gln4HxV1xUcLs9i5-kxUHxo_nyF"),
+            pdf("Materi 5. Peluang, Peluang Bersyarat, dan Kebebasan.pdf", "1U-TxRWhbTcgvOmDKoaEUVXHAvc8NHNKV"),
+            pdf("Materi 6. Data Preparasi.pdf", "1xTj0IYD7YPMx1QBINZ-6hiwg5TKxlPPn"),
+            pdf("Materi 8a. Pengantar-Data-Analytics-dan-Regresi.pdf", "11MB1tkKLRK_MZSw-o6FNF9vO-sn909FK"),
+            pdf("Materi 8b. Machine-Learning.pdf", "1k5RhafC7LINeRgwXmocIGrAujonR145_"),
+            pdf("Materi 9. Tahapan_Supervised_Learning.pdf", "1h3gVYGZ8ny6xBg2qJxbFteBCg3iQkRYJ"),
+            pdf("Materi 10. Generative_AI_LLM_Teks.pdf", "19z5EuBJrAYhFZusiQgsrG-C8jy1dveiF"),
+            pdf("Materi 11a. GenAI-nonText.pdf", "1QgtYNA6VRTt4JVUHI-y8cZrH-pd1ZzWm"),
+            pdf("Materi 11b. Prompting.pdf", "19AcCaO0_ptqvIqmoaiPgG7ddicwOMuhi"),
+            pdf("Materi 12. Etika-IA.pdf", "1UTyjaglkayS1iipGF9THtfhZiUgW8h74"),
+        ]),
+        folder("CATATAN", [
+            pdf("Rangkuman Persiapan UTS.pdf", "1yqqQ_dYDMGwmf71pk3sle_7u1-Xd8OI_"),
+        ]),
+        folder("PREDIKSI UTS", [
+            pdf("Latihan_Pra_UTS_LiDIA-1.pdf", "1WSXcSgpnrlW8rrkSvPoXPWKL9WQW2uEk"),
+            pdf("Pembahasan Latihan Pra-UTS LiDIA.pdf", "1W5NqydlgNSJ7N3Ics_pPNhUOw5argQhD"),
+        ]),
+        folder("PROYEK TUGAS BESAR", [
+            pdf("LAPORAN TUGAS BESAR (1).pdf", "11XrNbBe9F2jjm8YqiV0zykXEQejieKxx"),
+        ]),
     ];
     
     const [Url, SetUrl] = useState("");
@@ -90,6 +100,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +117,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }

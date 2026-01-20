@@ -20,25 +20,24 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
+    folder("Buku Referensi", [
+        pdf("Materials Science and Engineering An Introduction by Callister", "1nbNN2SBQlaspIxwMgMcLiT3d5-CHnTN0"),
+        pdf("The Science and Engineering of Materials", "1-QpB9kiAbEq5hRMTj_J-lr2UQ-pI4BBu"),
+        pdf("Electronic Materials & Devices Principles of 4th Ed", "1ED9RPBMSEe9aNptld3n-QaaRLEaIyiw1"),
     ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
-    ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
+    folder("PPT", [
+        pdf("Intro_1.pdf", "1GGRT9gzKoDlcmstSDhE_ZCM4JxQkXUcW"),
+        pdf("1 Pengantar Sains dan Rekayasa Material GS.pdf", "1S7g_nhWRw0URclDpelDrT_nWDkjVBcDF"),
+        pdf("Ch2.pdf", "1Qyv5JLK-00R_OIQEfiQZ_IUhb1dwhcYy"),
+        pdf("Ch3_SSM_2025.pdf", "1K4Ij_2pw3tJOLZz7IVL3HlQW-zXeOps0"),
+        pdf("Cacat pada material.pdf", "160pzgLYrpe-pGnfpTfDzu3Ca38Fy1X4e"),
+        pdf("5 Difusi Atom Ion.pdf", "1vVxAoZA0YKxHsZKM57D7HAa7-AtVeGm4"),
+        pdf("6 Pengantar Sifat Mekanik (1).pdf", "1VauzHpdMKfSAwq0ubLcywSSRr06cxv43"),
+        pdf("TF1203 Struktur dan Sifat Material - Pengantar Sifat Listrik (Bag. 1).pdf", "1-ApsQyQBR6rUKPvlLkQkIP2JoNGPIZEL"),
+        pdf("TF1203 Struktur dan Sifat Material - Pengantar Sifat Listrik (Bag. 2).pdf", "1EZ7RHnYxVoAbe0WCEowp6h4ZkIGxu6Bb"),
+        pdf("TF1203 Struktur dan Sifat Material - Pengantar Sifat Listrik (Bag. 3).pdf", "1Sm1NKK5GW5UdHeLi4skp3EE6ekawc9c4"),
+        pdf("TF1203 Struktur dan Sifat Material - Pengantar Sifat Magnetik.pdf", "176HWl1_E5WOhuY40dJA2tuyvfojvM-0N"),
+        pdf("TF1203 Struktur dan Sifat Material - Pengantar Sifat Optik.pdf", "1Z_DuhdonbHzWfMzc523Anv6oDVOU5xMs"),
     ]),
     ];
     
@@ -90,6 +89,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +106,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }

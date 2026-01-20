@@ -20,26 +20,23 @@ export default function Page() {
             url: `https://drive.google.com/file/d/${driveID}/preview`,
         });
     const data = [
-        folder("MATERI DAN RANGKUMAN", [
-        pdf("Materi 1.pdf", "1aaHVEd_5eLcE74F3mkv_iUhGF-dfHhpB"),
-        pdf("Materi 2.pdf", "1n-y5hPVPWqpavHIMUSB0wHVhOs4_vykC"),
-        pdf("Materi 3.pdf", "1L3G-fczrij-2TeJtMBV06KNFWM7marHg"),
-        pdf("Materi 4.pdf", "1EesTIz6N7I2gCpO-LevshW1EGScl4600"),
-        pdf("Materi 5.pdf", "19NmW9qMZ4C441482LehC4ALxTbnEB4IY"),
-        pdf("Materi 6.pdf", "1TpVHwKVTSDM_a7LmTbQaVi7aa0QKM2-D"),
-        pdf("Materi 7.pdf", "1GDeDAp-ocm5u0d-KKs3AnRyHCRtljMUW"),
-        pdf("Climate Change Mitigation.pdf", "1G068VG0NjK6ST_-aDP97SZd0lc1njVg_"),
-        pdf("Rangkuman Sustainability by AI.pdf", "1GOsNdA3aQkjj5UQyIJZS-U0tco-yey3D"),
+    folder("MATERI", [
+        pdf("PG1201-0.pdf", "1pnLMYm9BcZhwPndjJHoOnWdQsDwE1p0t"),
+        pdf("Berhitung-dan-Model.pdf", "1mJxYXqyP8-_iFGoA18v7hZeF3dogrFu2"),
+        pdf("PG1201-2.pdf", "1FpzC08PEJxMc0rL8_UESG5x6o7IIBcPq"),
+        pdf("PG1201_3 (1).pdf", "1vpIK3bz5Iw8AhhdousHzSdI5zRpQoK7G"),
+        pdf("PG1201-Penyelesaian-Persamaan-Tak-Linier.pdf", "1YPGYOjj0wr3yvk7M3axE9vPmK398l5Ms"),
+        pdf("PG1201-Penyelesaian-Persamaan-Tak-Linier-02-01.pdf", "1PzV4qN9Kyloqxne9mEZ5tyEcfOigS_dP"),
+        pdf("PG1201-Penyelesaian-Persamaan-Tak-Linier-Soal-Latihan (1).pdf", "14QJ0suKwjVzo9Y3irt7hxWvcZHWisWzL"),
+        pdf("PG1201_4.pdf", "19r11pQGJ2HIrf1Brv3EazTXX5JsX7wSB"),
+        pdf("PG1201_5.pdf", "1Vo-M4xG0Va93hHPWgyCiFDXckHQw9mO9"),
+        pdf("TK2106-ODE-01-Motivasi.pdf", "1iw1uiRwD2pA8H9HnpY1_7ipkGr1rxCaI"),
+        pdf("TK2106-ODE-02-Pendahuluan-ODE-Syarat-Awal.pdf", "12-bg9CsbIr313Qcvu827IPg7uLwuZBx0"),
+        pdf("TK2106-OPT-Optimisasi.pdf", "1wc6owM-W-x-nUdqZA5oOxaJRDrCLsLot"),
     ]),
-    folder("PROYEK", [
-        pdf("Poster Proyek Sustain.jpg", "1_amjoB2XxiMPpgSa3nvzJ0t6teoIU-AM"),
-        pdf("Booklet-Sustainability-FTI-K07_04.pdf", "1WMGfXe2spoR6qxCx5iSjdqDoqG6zi9M2"),
-    ]),
-    folder("UTS", []),
-    folder("KUIS", [
-        pdf("Kuis 1.pdf", "1zm3hUouBU2OhvkVDreWQeimRw9U8uizd"),
-        pdf("Kuis 2.pdf", "1uTkdC6R_BXU1IztWaW-BonamB8gQ36jy"),
-    ]),
+    folder("TUGAS", []),
+    folder("KUIS", []),
+    folder("UJIAN MODUL", []),
     ];
     
     const [Url, SetUrl] = useState("");
@@ -90,6 +87,7 @@ export default function Page() {
             </Tree>
         </div>
         </div>
+
       {/* RIGHT: Viewer */}
       <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
          {Url ? (
@@ -106,6 +104,5 @@ export default function Page() {
       </div>
 
     </div>
-
   );
 }
