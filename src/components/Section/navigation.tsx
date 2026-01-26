@@ -27,6 +27,9 @@ export default function Navigation(){
     {
         name:"Survei", href:"/survei"
     },
+    {
+        name:"Organogram", href:"/organogram"
+    }
     ]
     
 
