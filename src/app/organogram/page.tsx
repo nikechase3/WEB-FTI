@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FileX } from "lucide-react";
 import {Box} from '@/components/Section/fiturtest';
