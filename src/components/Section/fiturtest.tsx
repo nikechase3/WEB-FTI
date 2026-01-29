@@ -61,3 +61,19 @@ export const Box = ({image, title, subtitle, button, kode, id}: forbox) => {
     )
     
 }
+
+type forprof = {
+    image: string;
+    title: string;
+    subtitle: string;
+}
+export const Profile = ({image, title, subtitle}: forprof) => {
+    return(
+        <div className="px-4"><div style = {{backgroundImage: `url(${image})`}} className="gap-2 flex flex-col justify-end bg-cover bg-center bg-no-repeat w-48 h-64">
+            <div className="w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <div className="text-xl text-bold text-left">{title}</div>
+                <div className="text-sm text-left">{subtitle}</div>
+            </div>
+        </div></div>
+    )
+}
