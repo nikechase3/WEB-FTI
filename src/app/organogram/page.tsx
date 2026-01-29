@@ -16,7 +16,7 @@ export default function Page() {
     return(
     <div className="pt-21 min-h-screen bg-gray-900 text-white p-6 flex flex-col gap-2">
         <div className="relative w-full h-[50vh] overflow-hidden">
-            <img src="/fti2.jpg" className="w-full h-full object-cover "/>
+            <img src="/fti-ser.jpg" className="w-full h-full object-cover "/>
         </div>
         <h1 className="text-center text-2xl font-bold">Organogram FTI-25</h1>
         <h1 className="text-center text-md">Gambar akan dilengkapi setelah diadakan setelah ada foto BPA Berjakang</h1>
