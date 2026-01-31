@@ -94,7 +94,7 @@ export default function Page() {
       id: 11,
       category: ["TF","TK","TB","TP","TI","MR"],
       kode: "WI2005",
-      image: "/materi/Indoensia.png",
+      image: "/materi/Indonesia.png",
       title: "Bahasa Indonesia",
       subtitle: "Mata Kuliah Wajib ITB",
     },
@@ -229,18 +229,18 @@ export default function Page() {
     <>
       <div className = "pt-21">
         <h1 className="text-center text-5xl font-bold">Materi</h1>
-        <div className = "bg-gray-800 w-100% rounded-lg m-4 p-4">
+        <div className = "bg-gray-300 dark:bg-gray-800 w-100% rounded-lg m-4 p-4">
             <h1>Filter</h1>
             <select className = "p-3 rounded-lg border" name ="jurusan" id = "jurusan" value={Jurusan}
             onChange={(e) => pilJurusan(e.target.value)}>
-            <option className = "bg-gray-500" value = "def">Pilih jurusan</option>
-            <option className = "bg-gray-700" value = "FT">Tahap Tahun Pertama FTI</option>
-            <option className = "bg-gray-400" value = "TF">Teknik Fisika</option>
-            <option className = "bg-gray-700" value = "TK">Teknik Kimia</option>
-            <option className = "bg-gray-400" value = "TI">Teknik Industri</option>
-            <option className = "bg-gray-700" value = "MR">Manajemen Rekayasa</option>
-            <option className = "bg-gray-400" value = "TB">Teknik Bioenergi dan Kemurgi</option>
-            <option className = "bg-gray-700" value = "TP">Teknik Pangan</option>
+            <option className = "bg-blue-500" value = "def">Pilih jurusan</option>
+            <option className = "bg-blue-700" value = "FT">Tahap Tahun Pertama FTI</option>
+            <option className = "bg-blue-400" value = "TF">Teknik Fisika</option>
+            <option className = "bg-blue-700" value = "TK">Teknik Kimia</option>
+            <option className = "bg-blue-400" value = "TI">Teknik Industri</option>
+            <option className = "bg-blue-700" value = "MR">Manajemen Rekayasa</option>
+            <option className = "bg-blue-400" value = "TB">Teknik Bioenergi dan Kemurgi</option>
+            <option className = "bg-blue-700" value = "TP">Teknik Pangan</option>
             </select>
         </div>
         <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">

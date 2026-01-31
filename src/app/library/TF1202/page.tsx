@@ -59,12 +59,12 @@ export default function Page() {
     );
     }
     return (
-    <div className="pt-21 min-h-screen bg-gray-900 text-white p-6 flex gap-2">    
+    <div className="pt-21 min-h-screen bg-gray-200 dark:bg-gray-900 text-black dark:text-white p-6 flex gap-2">    
       {/* LEFT: Navigation Tree */}
-      <div className='border border-gray-700 rounded-lg p-4 bg-gray-950 h-[85vh] overflow-y-auto $className={isOpen ? "w-1/3" : "w-20"}'>
+      <div className='border border-gray-700 rounded-lg p-4 bg-gray-100 dark:bg-gray-950 h-[85vh] overflow-y-auto $className={isOpen ? "w-1/3" : "w-20"}'>
         <button onClick={() => setIsOpen(!isOpen)}
         className="text-white">
-            <svg className = "w-6 h-6" fill="None" stroke="white" viewBox = "0 0 24 24">
+            <svg className = "w-6 h-6 fill-none stroke-black dark:stroke-white" viewBox = "0 0 24 24">
                 <path strokeLinecap="round" strokeWidth = {2} d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
         </button>
@@ -79,7 +79,7 @@ export default function Page() {
         </div>
 
       {/* RIGHT: Viewer */}
-      <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-950 text-white">
+      <div className="w-full flex flex-col pt-4 h-[85vh] bg-gray-100 dark:bg-gray-950 text-white">
          {Url ? (
              <Embed 
                 header={Title} 
