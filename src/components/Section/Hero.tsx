@@ -27,43 +27,41 @@ export default function HeroSection({featureRef} : {featureRef : React.RefObject
       style={{opacity}}
         className="
           relative min-h-screen flex items-center justify-center
-                       
-          md:bg-[url('/Background.jpg')]
-          md:bg-cover md:bg-center md:bg-no-repeat
+          bg-[#F6F6F6]
         "
       >
        
-        <div className="absolute inset-0 hidden md:block bg-black/40 backdrop-blur-sm z-0" />
-
-        <div className="absolute inset-0 md:hidden block z-0">
-            <Ballpit
-            count={50}
-            gravity={0.01}
-            friction={1}
-            wallbounce={0.95}
-            followCursor={true}
-            />
-        </div>
+        
   
         
-        <div className="relative z-10 text-center sm:text-justify dark:text-white md:text-white gap-12 grid grid-cols-1 md:grid-cols-2 md:text-left px-6 md:px-16 ">
+        <div className="relative z-10 max-w-3xl mx-auto text-center px-6">
             <div className="lg:py-40 space-y-8"> 
                 <div className="space-y-2">
-                  <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-bold ">Selamat Datang</h1>
-                  <p className="text-2xl font-semibold sm:text-2xl md:text-3xl lg:text-5xl "> Massa FTI</p>
-                  <p className="text-lg text-justify hidden md:block"> Website ini merupakan platform terpadu untuk mahasiswa dalam mengakses berbagai sumber penting kampus. Fitur utamanya mencakup link layanan akademik, referensi belajar mata kuliah, informasi jurusan dan fakultas, serta kalkulator IP dan IPK interaktif. Dengan tampilan yang sederhana dan fungsional, website ini hadir sebagai pusat informasi dan pendukung studi yang praktis bagi mahasiswa.</p>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
+                    Semua kebutuhan akademik FTI 
+                    dalam satu tempat
+                  </h1>
+                  
+                  <p className="mt-6 text-lg md:text-xl text-neutral-600">
+                    Akses materi kuliah, layanan akademik, dan kalkulator IP/IPK
+                    dalam satu dashboard yang sederhana dan cepat.
+                  </p>
+
                 </div>
-                <div className=" flex flex-col sm:flex-row gap-4 rounded-full dark">
-                      <Button
-                      className=" bg-[#B1C9EF] hover:bg-[#D5DEEF] sm:w-fit px-12 py-4 rounded-full"
-                      onClick={() => Router.push("/library")}
-                      >Mulai Belajar
-                      </Button>
-                      <Button
-                        className="bg-[#F0F3FA] hover:bg-[#D5DEEF] sm:w-fit rounded-full px-12 py-4"
-                        onClick={() => featureRef.current?.scrollIntoView({behavior:"smooth"})}
-                        >Lihat Semua Tautan
-                      </Button>
+                <div className="mt-10 flex flex-col items-center gap-3">
+                  <Button
+                  className="px-12 py-4 rounded-full 
+                  text-base font-medium
+                  bg-black text-white
+                  shadow-lg shadow-black/20
+                  hover:bg-neutral-800"
+                  >
+                    Mulai Belajar
+                  </Button>
+
+                  <p className="text-sm text-neutral-400">
+                    Scroll untuk melihat fitur
+                  </p>
                 </div>
             </div>
 
