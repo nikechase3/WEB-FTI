@@ -14,33 +14,33 @@ export default function Page() {
   };
 
     return(
-    <div className="pt-21 min-h-screen bg-gray-900 text-white p-6 flex flex-col gap-2">
+    <div className="pt-21 min-h-screen bg-gray-100 text-black dark:bg-gray-900 dark:text-white p-6 flex flex-col gap-2">
         <div className="relative w-full h-[50vh] overflow-hidden">
-            <img src="/fti-ser.jpg" className="w-full h-full object-cover "/>
+            <img src="/fti-ser.png" className="w-full h-full object-cover object-bottom"/>
         </div>
-        <h1 className="text-center text-2xl font-bold">Organogram FTI-25</h1>
-        <h1 className="text-center text-md">Gambar akan dilengkapi setelah diadakan setelah ada foto BPA Berjakang</h1>
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto transition-all ${OpenIndex === 0 ? 'h-full' : 'h-20'}`}>
+        <h1 className="text-center text-2xl font-bold">Organogram BPA FTI-25</h1>
+        <h1 className="text-center text-md">Gambar akan dilengkapi setelah diadakan setelah ada foto Berjakang</h1>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto transition-all ${OpenIndex === 0 ? 'h-full' : 'h-22'}`}>
             
             {/* HEADER TOMBOL */}
-            <button onClick={() => handleToggle(0)} className="w-full text-white text-left focus:outline-none">    
+            <button onClick={() => handleToggle(0)} className="w-full text-black dark:text-white text-left focus:outline-none">    
                 <div className="flex flex-row items-center pt-2">
                     {OpenIndex !== 0 ? (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                         </svg>
                     ) : (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                         </svg>
                     )}
-                    <div className="font-bold pl-4">Badan Pengurus Harian</div>
+                    <div className="font-bold pl-4 text-black dark:text-white">Badan Pengurus Harian</div>
                 </div>
             </button>
 
             {/* KONTEN */}
             {OpenIndex === 0 && (
-                <div className="flex flex-col pt-4 pl-2 text-white">
+                <div className="flex flex-col pt-4 pl-2 text-black dark:text-white">
                     
                     <div className="text-left mb-6">
                         BPH merupakan sebuah badan yang mengurus segala bentuk administratif harian BPA FTI 25, BPH juga bertugas mengatur dan mengondisikan kerja masing-masing divisi agar sesuai dengan timeline yang telah ditentukan.
@@ -91,27 +91,27 @@ export default function Page() {
             )}
         </div>
 
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto transition-all ${OpenIndex === 1 ? 'h-full' : 'h-20'}`}>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto  ${OpenIndex === 1 ? 'h-full' : 'h-22'}`}>
             
             {/* HEADER TOMBOL */}
-            <button onClick={() => handleToggle(1)} className="w-full text-white text-left focus:outline-none">    
+            <button onClick={() => handleToggle(1)} className="w-full text-black dark:text-white text-left focus:outline-none">    
                 <div className="flex flex-row items-center pt-2">
                     {OpenIndex !== 1 ? (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                         </svg>
                     ) : (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                         </svg>
                     )}
-                    <div className="font-bold pl-4">Human Resource</div>
+                    <div className="font-bold pl-4 text-black dark:text-white">Human Resource</div>
                 </div>
             </button>
 
             {/* KONTEN */}
             {OpenIndex === 1 && (
-                <div className="flex flex-col pt-4 pl-2 text-white">
+                <div className="flex flex-col pt-4 pl-2 text-black dark:text-white">
                     
                     <div className="text-left mb-6">
                         HR merupakan pengambil keputusan tertinggi bersama ketua angkatan dalam menyetujui surat rancangan program kerja, proposal program kerja dan laporan pertanggungjawaban (LPJ) program kerja selama masa kepengurusan BPA FTI 25
@@ -151,20 +151,20 @@ export default function Page() {
                 </div>
             )}
         </div>
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto ${OpenIndex === 2 ? 'h-full' : 'h-20'}`}>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto ${OpenIndex === 2 ? 'h-full' : 'h-22'}`}>
             <div>
                 <button onClick={() => handleToggle(2)} className="text-white">    
                     <div className="flex flex-row items-center pt-2">
                         {OpenIndex !== 2 ? (
-                            <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                             </svg>
                         ) : (
-                            <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                             </svg>
                         )}
-                        <div className="font-bold pl-4">Divisi Internal</div>
+                        <div className="font-bold pl-4 text-black dark:text-white">Divisi Internal</div>
                     </div>
                 </button>
             </div>
@@ -187,10 +187,8 @@ export default function Page() {
                         </div>
                     </div>
                     <div className="w-full mt-8 flex flex-col gap-8">
-                            
-                            {/* --- SUBDIVISI PJ MASSA --- */}
                             <div className="flex flex-col gap-3">
-                                <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                                <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                     Subdivisi PJ Massa
                                 </h3>
                                 
@@ -223,7 +221,7 @@ export default function Page() {
 
                             {/* --- SUBDIVISI EO --- */}
                             <div className="flex flex-col gap-3">
-                                <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                                <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                     Subdivisi EO
                                 </h3>
                                 
@@ -254,20 +252,20 @@ export default function Page() {
                 </div>
             </div>}
         </div>
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto ${OpenIndex === 3 ? 'h-full' : 'h-20'}`}>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto ${OpenIndex === 3 ? 'h-full' : 'h-22'}`}>
             <div>
                 <button onClick={() => handleToggle(3)} className="text-white">    
                     <div className="flex flex-row items-center pt-2">
-                        {OpenIndex !== 2 ? (
-                            <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        {OpenIndex !== 3 ? (
+                            <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                             </svg>
                         ) : (
-                            <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                             </svg>
                         )}
-                        <div className="font-bold pl-4">Divisi Eksternal</div>
+                        <div className="font-bold pl-4 text-black dark:text-white">Divisi Eksternal</div>
                     </div>
                 </button>
             </div>
@@ -293,7 +291,7 @@ export default function Page() {
                         
                         {/* --- SUBDIVISI CAMPUS RELATIONS --- */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Campus Relations
                             </h3>
                             
@@ -308,7 +306,7 @@ export default function Page() {
                                 ].map((name, index) => (
                                     <div 
                                         key={index} 
-                                        className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default"
+                                        className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default"
                                     >
                                         {name}
                                     </div>
@@ -318,7 +316,7 @@ export default function Page() {
 
                         {/* --- SUBDIVISI PUBLIC RELATIONS --- */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Public Relations
                             </h3>
                             
@@ -335,7 +333,7 @@ export default function Page() {
                                 ].map((name, index) => (
                                     <div 
                                         key={index} 
-                                        className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default"
+                                        className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default"
                                     >
                                         {name}
                                     </div>
@@ -348,25 +346,25 @@ export default function Page() {
                 </div>
             </div>}
         </div>
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto ${OpenIndex === 4 ? 'h-full' : 'h-20'}`}>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto ${OpenIndex === 4 ? 'h-full' : 'h-22'}`}>
             
-            <button onClick={() => handleToggle(4)} className="w-full text-white text-left focus:outline-none">    
+            <button onClick={() => handleToggle(4)} className="w-full text-black dark:text-white text-left focus:outline-none">    
                 <div className="flex flex-row items-center pt-2">
                     {OpenIndex !== 4 ? (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                         </svg>
                     ) : (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                         </svg>
                     )}
-                    <div className="font-bold pl-4">Divisi Student Development</div>
+                    <div className="font-bold pl-4 text-black dark:text-white">Divisi Student Development</div>
                 </div>
             </button>
 
             {OpenIndex === 4 && (
-                <div className="flex flex-col pt-4 pl-2 text-white">
+                <div className="flex flex-col pt-4 pl-2 text-black dark:text-white">
                     
                     <div className="text-left mb-6">
                         Divisi Student Development bertanggung jawab atas pengembangan minat dan bakat massa FTI 25. Student Development bertugas untuk merealisasikan program-program kerja yang berkaitan dengan kegiatan non-akademik massa FTI 25 sebagai mahasiswa, seperti dalam pelaksanaan kompetisi bakat, olahraga, dan lain-lain. Bertanggung jawab pula dalam program-program meningkatkan kompetensi massa FTI 25 dalam aspek-aspek di luar akademik.
@@ -390,7 +388,7 @@ export default function Page() {
                     <div className="w-full flex flex-col gap-8">
                         
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Pemetaan dan Analisis
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -400,7 +398,7 @@ export default function Page() {
                                     "Nayla Putri Khalisha",
                                     "Syifa Nisrina Riwayat"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -408,7 +406,7 @@ export default function Page() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Program Pengembangan
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -420,7 +418,7 @@ export default function Page() {
                                     "Ghaitsa Abidah",
                                     "Keisha Nayla Izzati"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -428,7 +426,7 @@ export default function Page() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Manajemen Kegiatan
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -439,7 +437,7 @@ export default function Page() {
                                     "Nabila Az-zahra Kurniawati",
                                     "Aqilah Nazifa"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -450,25 +448,25 @@ export default function Page() {
                 </div>
             )}
         </div>
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto ${OpenIndex === 5 ? 'h-full' : 'h-20'}`}>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto ${OpenIndex === 5 ? 'h-full' : 'h-22'}`}>
             
-            <button onClick={() => handleToggle(5)} className="w-full text-white text-left focus:outline-none">    
+            <button onClick={() => handleToggle(5)} className="w-full text-black dark:text-white text-left focus:outline-none">    
                 <div className="flex flex-row items-center pt-2">
                     {OpenIndex !== 5 ? (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                         </svg>
                     ) : (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                         </svg>
                     )}
-                    <div className="font-bold pl-4">Divisi Media</div>
+                    <div className="font-bold pl-4 text-black dark:text-white">Divisi Media</div>
                 </div>
             </button>
 
             {OpenIndex === 5 && (
-                <div className="flex flex-col pt-4 pl-2 text-white">
+                <div className="flex flex-col pt-4 pl-2 text-black dark:text-white">
                     
                     <div className="text-left mb-6">
                         Divisi Media adalah divisi yang bertanggung jawab mengelola identitas visual, publikasi informasi, dan dokumentasi kegiatan resmi Angkatan FTI 2025. Terdiri dari subdivisi Dokumentasi, Publikasi, dan Kreatif. Divisi ini memastikan setiap konten visual dan informasi disampaikan secara tepat, konsisten, dan sesuai standar branding angkatan.
@@ -493,7 +491,7 @@ export default function Page() {
                         
                         {/* Subdivisi Dokumentasi */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Dokumentasi
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -505,7 +503,7 @@ export default function Page() {
                                     "Moch. Sayfa Bhirawa Riady",
                                     "Hafiz Habibie Mardhatillah"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -514,7 +512,7 @@ export default function Page() {
 
                         {/* Subdivisi Publikasi */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Publikasi
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -526,7 +524,7 @@ export default function Page() {
                                     "M. Fadharrel Syahrazza S",
                                     "Khaira Salsadila Rinditya"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -535,7 +533,7 @@ export default function Page() {
 
                         {/* Subdivisi Kreatif */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Subdivisi Kreatif
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -547,7 +545,7 @@ export default function Page() {
                                     "Jovanni Anabel Pratama",
                                     "Sherina Zahra"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -558,25 +556,25 @@ export default function Page() {
                 </div>
             )}
         </div>
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto ${OpenIndex === 6 ? 'h-full' : 'h-20'}`}>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto ${OpenIndex === 6 ? 'h-full' : 'h-22'}`}>
             
-            <button onClick={() => handleToggle(6)} className="w-full text-white text-left focus:outline-none">    
+            <button onClick={() => handleToggle(6)} className="w-full text-black dark:text-white text-left focus:outline-none">    
                 <div className="flex flex-row items-center pt-2">
                     {OpenIndex !== 6 ? (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                         </svg>
                     ) : (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                         </svg>
                     )}
-                    <div className="font-bold pl-4">Divisi Akademik</div>
+                    <div className="font-bold pl-4 text-black dark:text-white">Divisi Akademik</div>
                 </div>
             </button>
 
             {OpenIndex === 6 && (
-                <div className="flex flex-col pt-4 pl-2 text-white">
+                <div className="flex flex-col pt-4 pl-2 text-black dark:text-white">
                     
                     <div className="text-left mb-6">
                         Divisi Akademik adalah divisi yang bertanggung jawab memfasilitasi kebutuhan akademik mahasiswa FTI 2025.
@@ -598,36 +596,16 @@ export default function Page() {
                     </div>
 
                     <div className="w-full flex flex-col gap-8">
-                        
-                        {/* Subdivisi Khusus Web FTI */}
-                        <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
-                                Subdivisi Khusus Web FTI
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                                {[
-                                    "Bertrand Aurey Justinian",
-                                    "Haikal Danendra Asa",
-                                    "Blesstian Putra Sianturi",
-                                    "Jonathan Jodi Diego"
-                                ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
-                                        {name}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
                         {/* Subdivisi Kurikulum */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Ketua Subdivisi Kurikulum
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     "Naufal Auliya Yusran"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -636,21 +614,38 @@ export default function Page() {
 
                         {/* Subdivisi Media */}
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Ketua Subdivisi Media
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     "Devi Nurpalah Farizi",
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="flex flex-col gap-3">
-                            <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                                Subdivisi Khusus Web FTI
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {[
+                                    "Bertrand Aurey Justinian",
+                                    "Haikal Danendra Asa",
+                                    "Blesstian Putra Sianturi",
+                                    "Jonathan Diego Susanto"
+                                ].map((name, index) => (
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
+                                        {name}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                                 Anggota Divisi
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -665,7 +660,7 @@ export default function Page() {
                                     "Gamaliel Pasaribu",
                                     "Jonathan Diego Susanto"
                                 ].map((name, index) => (
-                                    <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                    <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                         {name}
                                     </div>
                                 ))}
@@ -676,27 +671,27 @@ export default function Page() {
                 </div>
             )}
         </div>
-        <div className={`border border-gray-700 rounded-lg p-4 bg-gray-950 overflow-y-auto ${OpenIndex === 7 ? 'h-full' : 'h-20'}`}>
+        <div className={`border bg-gray-300 text-black dark:text-white border-gray-700 rounded-lg p-4 dark:bg-gray-950 overflow-y-auto ${OpenIndex === 7 ? 'h-full' : 'h-22'}`}>
             
             {/* HEADER TOMBOL */}
-            <button onClick={() => handleToggle(7)} className="w-full text-white text-left focus:outline-none">    
+            <button onClick={() => handleToggle(7)} className="w-full text-black dark:text-white text-left focus:outline-none">    
                 <div className="flex flex-row items-center pt-2">
                     {OpenIndex !== 7 ? (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 9l6 4 6-4"/>
                         </svg>
                     ) : (
-                        <svg className="w-8 h-8 p-1" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 p-1 fill-none stroke-black dark:stroke-white" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14"/>
                         </svg>
                     )}
-                    <div className="font-bold pl-4">Divisi Fundraise</div>
+                    <div className="font-bold pl-4 text-black dark:text-white">Divisi Fundraise</div>
                 </div>
             </button>
 
             {/* KONTEN */}
             {OpenIndex === 7 && (
-                <div className="flex flex-col pt-4 pl-2 text-white">
+                <div className="flex flex-col pt-4 pl-2 text-black dark:text-white">
                     
                     <div className="text-left mb-6">
                         Divisi Fundraise adalah divisi yang bertanggung jawab merencanakan dan mengelola kegiatan pendanaan guna memastikan keberlangsungan finansial BPA FTI 2025.
@@ -720,7 +715,7 @@ export default function Page() {
 
                     {/* LIST ANGGOTA */}
                     <div className="flex flex-col gap-3">
-                        <h3 className="font-bold text-lg text-white border-b border-gray-700 pb-2 w-fit pr-8">
+                        <h3 className="font-bold text-lg text-black dark:text-white border-b border-gray-700 pb-2 w-fit pr-8">
                             Anggota Divisi
                         </h3>
                         <div className="flex flex-wrap gap-2">
@@ -737,7 +732,7 @@ export default function Page() {
                                 "Alvy Amalia Syahla",
                                 "R. M. Habiburrahman"
                             ].map((name, index) => (
-                                <div key={index} className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-gray-200 cursor-default">
+                                <div key={index} className="px-4 py-2 bg-gray-200 dark:bg-gray-800 border border-gray-700 rounded-full text-xs sm:text-sm text-black dark:text-gray-200 cursor-default">
                                     {name}
                                 </div>
                             ))}
