@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function MajorPage(){
     const [openIndex, setOpenIndex] = useState<number|null>(null)
     return(
-        <div className="min-h-screen bg-linear-to-t from-sky-400 py-20">
+        <div className="min-h-screen bg-sky-300 py-20">
             <div className="text-center">
                 <h1 className="text-4xl md:text-6xl font-bold">Jurusan</h1>
             </div>
