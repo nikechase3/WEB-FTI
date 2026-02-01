@@ -86,19 +86,19 @@ export default function calculatorGrade () {
             return { points, credits };
         };
 
-        // 1. Calculate Semester 1
+        // calc semester 1
         const s1 = getStats(coursesS1);
         const resS1 = s1.credits > 0 ? s1.points / s1.credits : 0;
         setGPAS1(resS1);
         setSKSS1(s1.credits);
 
-        // 2. Calculate Semester 2
+        // calc semester 2
         const s2 = getStats(courses);
         const resS2 = s2.credits > 0 ? s2.points / s2.credits : 0;
         setGPAS2(resS2);
         setSKSS2(s2.credits);
 
-        // 3. Calculate Total (Combined)
+        // calc kumulatif
         const combinedCredits = s1.credits + s2.credits;
         const combinedGPA = combinedCredits > 0 ? (s1.points + s2.points) / combinedCredits : 0;
         setCumulativeGPA(combinedGPA);
@@ -585,50 +585,7 @@ export default function calculatorGrade () {
                             </div>
                             </CardContent>
                 </Card>
-                
-
-{/*                         <div className="space-y-6 ">
-                            <Card>
-                                <CardHeader>
-
-                                    <CardTitle>
-                                        IPK Kumulatif &#40; Opsional &#41;
-                                    </CardTitle>
-                                    <CardDescription>
-                                        Masukan IPK dan total SKS sebelumnya untuk menghitung IPK kumulatif
-                                    </CardDescription>
-
-                                </CardHeader>
-
-                                <CardContent className="space-y-4">
-                                    <div className="grid grid-cols-2 gap-4">
-                                        <div>
-                                            <Label htmlFor="prev-gpa" className="mb-2">IPK Sebelumnya</Label>
-                                            <Input
-                                            id="prev-gpa"
-                                            type="number"
-                                            placeholder="0.00"
-                                            step="0.01"
-                                            min="0"
-                                            max="4"
-                                            value={prevGPA || ""}
-                                            onChange={(e) => setPrevGPA(Number.parseFloat(e.target.value)|| 0)}/>
-                                        </div>
-                                        <div>
-                                            <Label htmlFor="prev-sks" className="mb-2 text-nowrap">Total SKS Sebelumnya</Label>
-                                            <Input
-                                            id="prev-sks"
-                                            type="number"
-                                            placeholder="0"
-                                            min="0"
-                                            value={prevCredits || ""}
-                                            onChange={(e) => setPrevCredits(Number.parseFloat(e.target.value)|| 0)}/>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card> */}
-
-                            <Card className="md:col-span-2"> {/* Spread across both columns for better visibility */}
+                            <Card className="md:col-span-2">
                                 <CardHeader>
                                     <CardTitle>Ringkasan Hasil Perhitungan</CardTitle>
                                 </CardHeader>
@@ -675,6 +632,5 @@ export default function calculatorGrade () {
                             </Card>
                         </div>
             </div>
-        /* </div> */
     )
 }
