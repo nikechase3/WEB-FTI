@@ -41,11 +41,13 @@ const gradePoints : {[key : string] : number} = {
     C: 2.0,
     D: 1.0,
     E: 0.0,
+}; 
+
 interface Course {
   id: string
   name: string
   credits: number
-  grade?: Grade
+  grade?: Grade;
 }
 
 /* ================= GRADE SCALE ================= */
