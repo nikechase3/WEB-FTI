@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function MajorPage(){
     const [openIndex, setOpenIndex] = useState<number|null>(null)
     return(
-        <div className="min-h-screen bg-linear-to-t from-sky-400 py-20">
+        <div className="min-h-screen bg-[#8ce5ff] dark:bg-gray-900 py-20">
             <div className="text-center">
                 <h1 className="text-4xl md:text-6xl font-bold">Jurusan</h1>
             </div>
@@ -17,7 +17,7 @@ export default function MajorPage(){
             <section className="py-10 mx-auto">
                 <div className="grid grid-cols-1 px-4 gap-4">
                     {jurusanDept.map((item, index) => (
-                        <Card key={index} className="bg-neutral-300/20 backdrop-blur-[1px] dark:hover:bg-neutral-300/30 border border-neutral-400/30">
+                        <Card key={index} className="bg-white/40 backdrop-blur-[1px] dark:hover:bg-neutral-300/30 border border-neutral-400/30">
                             <motion.button onClick={() => setOpenIndex(openIndex === index ?  null : index)}
                                 className="w-full flex items-center justify-center">
                                     <h1 className="text-center font-bold text-xl">{item.name}</h1>
@@ -35,7 +35,7 @@ export default function MajorPage(){
 
                                         <CardContent className="space-y-6">
                                             <div className="space-y-2">
-                                                <h1 className="font-bold">&#45;Ilmu yang dipelajari:</h1>
+                                                <h1 className="font-bold">&#45;Deskripsi Jurusan:</h1>
                                                 <p className="text-start">{item.ilmu}</p>
                                             </div>
                                             <div className="space-y-2">
