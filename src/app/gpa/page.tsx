@@ -31,6 +31,7 @@ const gradePoints : {[key : string] : number} = {
 const gradeOptions = Object.keys(gradePoints)
 
 export default function calculatorGrade () {
+    const [coursesS1, setCoursesS1] =useState<Course[]>([{id: "1", name: "", credits: 0, grade: ""}])
     const [courses, setCourses] =useState<Course[]>([{id: "1", name: "", credits: 0, grade: ""}])
     const [semesterGPA, setSemesterGPA] = useState<number>(0)
     const [totalCredits, setTotalCredits] = useState<number>(0)
@@ -39,6 +40,10 @@ export default function calculatorGrade () {
     const [prevGPA, setPrevGPA] = useState<number>(0)
     const [prevCredits, setPrevCredits] = useState<number> (0)
     const [cumulativeGPA, setCumulativeGPA] = useState<number>(0)
+    const [gpaS1, setGPAS1] = useState<number>(0);
+    const [sksS1, setSKSS1] = useState<number>(0);
+    const [gpaS2, setGPAS2] = useState<number>(0);
+    const [sksS2, setSKSS2] = useState<number>(0);
 
     const addCourse = () => {
         const newCourse: Course = 
@@ -51,6 +56,12 @@ export default function calculatorGrade () {
         setCourses([...courses, newCourse])
     }
 
+    const updateCourseS1 = (id: string, field: keyof Course, value: any) => {
+        setCoursesS1((prev) =>
+            prev.map((c) => (c.id === id ? { ...c, [field]: value } : c))
+        );
+    };
+    
     const updateCourse = (id: string, field: keyof Course, value: string | number) => {
         setCourses(courses.map((course) => (course.id === id ? {...course, [field] : value } : course)))
     }
@@ -62,34 +73,41 @@ export default function calculatorGrade () {
     }
 
     const calculateGPA = () => {
-        let totalPoints = 0;
-        let totalCreditHours = 0;
+        // Helper to calculate single semester stats
+        const getStats = (items: Course[]) => {
+            let points = 0;
+            let credits = 0;
+            items.forEach((c) => {
+                if (c.grade && c.credits > 0) {
+                    points += gradePoints[c.grade] * c.credits;
+                    credits += c.credits;
+                }
+            });
+            return { points, credits };
+        };
 
-        courses.forEach((course) => {
-            if(course.grade && course.credits > 0){
-                totalPoints += gradePoints[course.grade] * course.credits;
-                totalCreditHours += course.credits
-            }
-        })
+        // 1. Calculate Semester 1
+        const s1 = getStats(coursesS1);
+        const resS1 = s1.credits > 0 ? s1.points / s1.credits : 0;
+        setGPAS1(resS1);
+        setSKSS1(s1.credits);
 
-        const gpa = totalCreditHours > 0 ? totalPoints / totalCreditHours : 0;
-        setSemesterGPA(gpa)
-        setTotalCredits(totalCreditHours)
+        // 2. Calculate Semester 2
+        const s2 = getStats(courses);
+        const resS2 = s2.credits > 0 ? s2.points / s2.credits : 0;
+        setGPAS2(resS2);
+        setSKSS2(s2.credits);
 
-        if(prevCredits > 0 && prevGPA){
-            const totalPrevPoints = prevGPA * prevCredits;
-            const totalCurrentPoints = gpa * totalCreditHours;
-            const totalAllCredits  =   prevCredits + totalCreditHours;
-            const cumulativeGPA = totalAllCredits > 0 ? (totalPrevPoints + totalCurrentPoints) / totalAllCredits : 0;
-            setCumulativeGPA(cumulativeGPA);
-        }else{
-            setCumulativeGPA(gpa)
-        }
-    }
+        // 3. Calculate Total (Combined)
+        const combinedCredits = s1.credits + s2.credits;
+        const combinedGPA = combinedCredits > 0 ? (s1.points + s2.points) / combinedCredits : 0;
+        setCumulativeGPA(combinedGPA);
+        setTotalCredits(combinedCredits);
+    };
 
     useEffect(() => {
         calculateGPA()
-    }, [courses, prevGPA, prevCredits])
+    }, [courses, prevGPA, prevCredits, coursesS1])
 
     
 
@@ -369,6 +387,18 @@ export default function calculatorGrade () {
   });
 
     useEffect(() => {
+  const ftCourses = materiData
+    .filter((item) => item.category === "FT")
+    .map((item) => ({
+      id: `s1-${item.id}`,
+      name: item.title,
+      credits: item.sks || 2,
+      grade: "",
+    }));
+  setCoursesS1(ftCourses);
+}, []); 
+
+    useEffect(() => {
     if (Jurusan !== "def") {
         const autoCourses: Course[] = materiData
         .filter((item) => {
@@ -398,13 +428,12 @@ export default function calculatorGrade () {
                 <select className = "p-3 rounded-lg border bg-white/70 dark:bg-white/30" style={{marginTop: 10 + 'px'}}  name ="jurusan" id = "jurusan" value={Jurusan}
                 onChange={(e) => pilJurusan(e.target.value)}>
                 <option className = "bg-blue-500" value = "def">Pilih jurusan</option>
-                <option className = "bg-blue-700" value = "FT">Tahap Tahun Pertama FTI</option>
-                <option className = "bg-blue-400" value = "TF">Teknik Fisika Semester 2</option>
-                <option className = "bg-blue-700" value = "TK">Teknik Kimia Semester 2</option>
-                <option className = "bg-blue-400" value = "TI">Teknik Industri Semester 2</option>
-                <option className = "bg-blue-700" value = "MR">Manajemen Rekayasa Semester 2</option>
-                <option className = "bg-blue-400" value = "TB">Teknik Bioenergi dan Kemurgi Semester 2</option>
-                <option className = "bg-blue-700" value = "TP">Teknik Pangan Semester 2</option>
+                <option className = "bg-blue-400" value = "TF">Teknik Fisika</option>
+                <option className = "bg-blue-700" value = "TK">Teknik Kimia</option>
+                <option className = "bg-blue-400" value = "TI">Teknik Industri</option>
+                <option className = "bg-blue-700" value = "MR">Manajemen Rekayasa</option>
+                <option className = "bg-blue-400" value = "TB">Teknik Bioenergi dan Kemurgi</option>
+                <option className = "bg-blue-700" value = "TP">Teknik Pangan</option>
                 </select>
             </div>
 
@@ -414,81 +443,151 @@ export default function calculatorGrade () {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Calculator className="h-5 w-5"/>
-                                Mata Kuliah 
+                                Mata Kuliah Semester 1
+                        </CardTitle>
+                        <CardDescription>Masukan nilai yang diperoleh</CardDescription>
+                    </CardHeader>
+                        <CardContent>
+                            <div className="space-y-4">
+                                <Table>
+                                <TableHeader>
+                                    <TableRow className="hover:bg-transparent border-b">
+                                    <TableHead className="w-[70%]">Mata Kuliah</TableHead>
+                                    <TableHead className="w-[10%]">SKS</TableHead>
+                                    <TableHead className="w-[13%]">Nilai</TableHead>
+                                    <TableHead className="w-[7%]"></TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {coursesS1.map((course) => (
+                                    <TableRow key={course.id} className="border-b last:border-0">
+                                        <TableCell className="py-2 px-1">
+                                        <Input
+                                            value={course.name}
+                                            placeholder="Nama Mata Kuliah"
+                                            onChange={(e) => updateCourseS1(course.id, "name", e.target.value)}
+                                            className="h-9"
+                                        />
+                                        </TableCell>
+                                        <TableCell className="py-2 px-1">
+                                        <Input
+                                            type="number"
+                                            value={course.credits === 0 ? "" : course.credits}
+                                            onChange={(e) => updateCourseS1(course.id, "credits", parseInt(e.target.value) || 0)}
+                                            className="h-9"
+                                        />
+                                        </TableCell>
+                                        <TableCell className="py-2 px-1">
+                                        <Select
+                                            value={course.grade}
+                                            onValueChange={(value) => updateCourseS1(course.id, "grade", value)}
+                                        >
+                                            <SelectTrigger className="h-9"><SelectValue placeholder="Pilih" /></SelectTrigger>
+                                            <SelectContent>
+                                            {gradeOptions.map((g) => <SelectItem key={g} value={g}>{g}</SelectItem>)}
+                                            </SelectContent>
+                                        </Select>
+                                        </TableCell>
+                                        <TableCell className="py-2 px-1 text-center">
+                                        <Button 
+                                            variant="ghost" 
+                                            size="icon" 
+                                            className="text-red-500 h-8 w-8"
+                                            onClick={() => setCoursesS1(coursesS1.filter(c => c.id !== course.id))}
+                                            disabled={coursesS1.length === 1}
+                                        >
+                                            <Trash2 className="w-4 h-4"/>
+                                        </Button>
+                                        </TableCell>
+                                    </TableRow>
+                                    ))}
+                                </TableBody>
+                                </Table>
+                                <Button 
+                                className="w-full mt-2" 
+                                onClick={() => setCoursesS1([...coursesS1, {id: Date.now().toString(), name: "", credits: 0, grade: ""}])} 
+                                variant="outline"
+                                >
+                                <Plus className="h-4 w-4 mr-2"/> Tambah Matkul Semester 1
+                                </Button>
+                            </div>
+                            </CardContent>
+                </Card>
+                
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                            <Calculator className="h-5 w-5"/>
+                                Mata Kuliah Semester 2
                         </CardTitle>
                         <CardDescription>Masukan nilai yang diperoleh</CardDescription>
                     </CardHeader>
 
-                    <CardContent>
-                        <div className="space-y-4">
-                            <Table>
+                        <CardContent>
+                            <div className="space-y-4">
+                                <Table>
                                 <TableHeader>
-                                    <TableRow>
-                                        <TableHead className="w-[65%] text-left font-bold text-gray-700 dark:text-white">Mata Kuliah</TableHead>
-                                        <TableHead className="w-[12%] text-left font-bold text-gray-700 dark:text-white">SKS</TableHead>
-                                        <TableHead className="w-[16%] text-left font-bold text-gray-700 dark:text-white">Nilai</TableHead>
-                                        <TableHead className="w-[7%]"></TableHead>
+                                    <TableRow className="hover:bg-transparent border-b">
+                                    <TableHead className="w-[70%]">Mata Kuliah</TableHead>
+                                    <TableHead className="w-[10%]">SKS</TableHead>
+                                    <TableHead className="w-[13%]">Nilai</TableHead>
+                                    <TableHead className="w-[7%]"></TableHead>
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
                                     {courses.map((course) => (
-                                        <TableRow
-                                        key={course.id} className="hover:bg-transparent">
-                                            <TableCell className="p-1">
-                                                <Input
-                                                value={course.name}
-                                                placeholder="Mata Kuliah"
-                                                onChange={(e) => updateCourse(course.id, "name", e.target.value)}
-                                                />
-                                            </TableCell>
-                                            <TableCell className="p-1">
-                                                <Input
-                                                type="number"
-                                                value={course.credits === 0 ? "" : course.credits}
-                                                placeholder="SKS"
-                                                onChange={(e) => updateCourse(course.id, "credits", Number.parseInt(e.target.value) || 0)}
-                                                />
-                                            </TableCell>
-                                            <TableCell className="p-1">
-                                                <Select
-                                                value={course.grade}
-                                                onValueChange={(value) => updateCourse(course.id, "grade", value)}>
-                                                    <SelectTrigger>
-                                                        <SelectValue placeholder="pilih"/>
-                                                    </SelectTrigger>
-                                                    <SelectContent>
-                                                        {gradeOptions.map((grade) => (
-                                                            <SelectItem
-                                                            key={grade}
-                                                            value={grade}>
-                                                                {grade} ({gradePoints[grade]})
-                                                            </SelectItem>
-                                                        ))}
-                                                    </SelectContent>
-                                                </Select>
-                                            </TableCell>
-                                            <TableCell>
-                                                <Button 
-                                                variant={"ghost"}
-                                                size={"sm"}
-                                                onClick={() => removeCourse(course.id)}
-                                                disabled= {courses.length === 1}>
-                                                    <Trash2 className="w-2 h-2"/>
-                                                </Button>
-                                            </TableCell>
-                                        </TableRow>
-                                    ) )}
+                                    <TableRow key={course.id} className="border-b last:border-0">
+                                        <TableCell className="py-2 px-1">
+                                        <Input
+                                            value={course.name}
+                                            placeholder="Nama Mata Kuliah"
+                                            onChange={(e) => updateCourse(course.id, "name", e.target.value)}
+                                            className="h-9"
+                                        />
+                                        </TableCell>
+                                        <TableCell className="py-2 px-1">
+                                        <Input
+                                            type="number"
+                                            value={course.credits === 0 ? "" : course.credits}
+                                            onChange={(e) => updateCourse(course.id, "credits", parseInt(e.target.value) || 0)}
+                                            className="h-9"
+                                        />
+                                        </TableCell>
+                                        <TableCell className="py-2 px-1">
+                                        <Select
+                                            value={course.grade}
+                                            onValueChange={(value) => updateCourse(course.id, "grade", value)}
+                                        >
+                                            <SelectTrigger className="h-9"><SelectValue placeholder="Pilih" /></SelectTrigger>
+                                            <SelectContent>
+                                            {gradeOptions.map((g) => <SelectItem key={g} value={g}>{g}</SelectItem>)}
+                                            </SelectContent>
+                                        </Select>
+                                        </TableCell>
+                                        <TableCell className="py-2 px-1 text-center">
+                                        <Button 
+                                            variant="ghost" 
+                                            size="icon" 
+                                            className="text-red-500 h-8 w-8"
+                                            onClick={() => removeCourse(course.id)}
+                                            disabled={courses.length === 1}
+                                        >
+                                            <Trash2 className="w-4 h-4"/>
+                                        </Button>
+                                        </TableCell>
+                                    </TableRow>
+                                    ))}
                                 </TableBody>
-                            </Table>
-                            <Button className="w-full bg-transparent " onClick={addCourse} variant={"outline"}>
-                                <Plus className="h-4 w-4 mr-2"/>
-                            </Button>
-                        </div>
-                                {/*Hasil Perhitungan */}
-                    </CardContent>
+                                </Table>
+                                <Button className="w-full mt-2" onClick={addCourse} variant="outline">
+                                <Plus className="h-4 w-4 mr-2"/> Tambah Matkul S2
+                                </Button>
+                            </div>
+                            </CardContent>
                 </Card>
+                
 
-                        <div className="space-y-6 ">
+{/*                         <div className="space-y-6 ">
                             <Card>
                                 <CardHeader>
 
@@ -527,61 +626,55 @@ export default function calculatorGrade () {
                                         </div>
                                     </div>
                                 </CardContent>
-                            </Card>
+                            </Card> */}
 
-                            <Card>
+                            <Card className="md:col-span-2"> {/* Spread across both columns for better visibility */}
                                 <CardHeader>
-                                    <CardTitle>Hasil Perhitungan</CardTitle>
+                                    <CardTitle>Ringkasan Hasil Perhitungan</CardTitle>
                                 </CardHeader>
-                                <CardContent className="space-y-4">
-                                    <div className="grid gap-4">
-                                        <div className="grid gap-4">
-                                            <div className="flex justify-between items-center p-4 bg-muted rounded-lg">
-                                                <div>
-                                                    <p>IP Semester ini</p>
-                                                    <p className= {`text-2xl font-semibold ${getGPAColor(semesterGPA)} `}>{semesterGPA.toFixed(2)}</p>
-                                                    <Badge variant={"outline"} className="mt-1">{getGPALabel(semesterGPA)}</Badge>
-                                                </div>
-
-                                                <div>
-                                                    <p>Total SKS</p>
-                                                    <p>{totalCredits}</p>
-                                                </div>
-                                            </div>
-
-                                            {prevCredits > 0 && prevGPA > 0 && (
-                                                <div className="flex justify-between items-center p-4 bg-primary/5 rounded-lg">
-                                                <div>
-                                                    <p>IP Kumulatif</p>
-                                                    <p className= {`text-2xl font-semibold ${getGPAColor(cumulativeGPA)} `}>{cumulativeGPA.toFixed(2)}</p>
-                                                    <Badge variant={"outline"} className="mt-1">{getGPALabel(cumulativeGPA)}</Badge>
-                                                </div>
-
-                                                <div>
-                                                    <p>Total SKS</p>
-                                                    <p>{totalCredits + prevCredits}</p>
-                                                </div>
-                                            </div>
-                                            )}
+                                <CardContent>
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        
+                                        {/* Box 1: Semester 1 */}
+                                        <div className="p-4 bg-muted rounded-lg border">
+                                            <p className="text-sm font-medium">IP Semester 1</p>
+                                            <p className={`text-2xl font-bold ${getGPAColor(gpaS1)}`}>{gpaS1.toFixed(2)}</p>
+                                            <Badge variant="outline" className="mt-1">{sksS1} SKS</Badge>
                                         </div>
 
-                                        <div className="mt-6">
-                                            <h4 className="mb-2 font-semibold">Skala Penilaian</h4> 
-                                            <div className="grid grid-cols-2 gap-2 text-sm">
-                                                {Object.entries(gradePoints).map(([grade, points]) => (
-                                                    <div
-                                                    key={grade} className="flex justify-between p-2 bg-muted rounded-lg">
-                                                        <span>{grade}</span>
-                                                        <span>{points.toFixed(1)}</span>
-                                                    </div>
-                                                ))}
-                                            </div>   
+                                        {/* Box 2: Semester 2 */}
+                                        <div className="p-4 bg-muted rounded-lg border">
+                                            <p className="text-sm font-medium">IP Semester 2</p>
+                                            <p className={`text-2xl font-bold ${getGPAColor(gpaS2)}`}>{gpaS2.toFixed(2)}</p>
+                                            <Badge variant="outline" className="mt-1">{sksS2} SKS</Badge>
+                                        </div>
+
+                                        {/* Box 3: TOTAL (IPK) */}
+                                        <div className="p-4 bg-primary/13 dark:bg-primary/20 rounded-lg border border-primary/30">
+                                            <p className="text-sm font-bold text-primary">IP Kumulatif (S1 + S2)</p>
+                                            <p className={`text-3xl font-black ${getGPAColor(cumulativeGPA)}`}>
+                                                {cumulativeGPA.toFixed(2)}
+                                            </p>
+                                            <Badge variant="outline" className="mt-1">{sksS2} SKS</Badge>
+                                        </div>
+
+                                    </div>
+
+                                    <div className="mt-6 pt-6 border-t">
+                                        <h4 className="mb-3 text-sm font-semibold">Skala Penilaian</h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {Object.entries(gradePoints).map(([grade, points]) => (
+                                                <div key={grade} className="flex gap-2 px-3 py-1 bg-white/50 dark:bg-black/20 rounded-full text-xs border">
+                                                    <span className="font-bold">{grade}</span>
+                                                    <span>{points.toFixed(1)}</span>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </div>
             </div>
-        </div>
+        /* </div> */
     )
 }
