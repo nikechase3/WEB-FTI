@@ -927,48 +927,48 @@ export const jurusanDept: jurusan[] =[
     id:1,
     name:"Teknik Kimia",
     himpunan:"Himpunan Mahasiswa Teknik Kimia ITB (HIMATEK-ITB)",
-    ilmu:"Teknik Kimia adalah program studi yang mempelajari perancangan dan pengelolaan proses industri, termasuk pabrik kimia, bioproses, dan pengolahan makanan. Dalam program ini, mahasiswa diajarkan untuk merancang proses-proses yang terjadi dalam pabrik, seperti reaksi dalam reaktor, pemanfaatan sumber daya, serta pengendalian proses. Selain itu, mahasiswa juga mempelajari cara meningkatkan efisiensi proses kimia dan biologis, baik di dalam maupun di luar pabrik, agar dapat menghasilkan produk secara lebih cepat dan optimal. Contoh aplikasinya mencakup proses fermentasi untuk produk seperti yoghurt, roti, dan kecap, serta pengolahan minyak bumi dan gas alam untuk produksi bensin, solar, dan biofuel.",
-    prospekKerja:"Industri Proses Kimia (misal Industri pupuk, pengolahan minyak bumi, kertas, polimer, gas, logam, makanan, obat-obatan, dll) Pabrik Pengelolaan Proses Kimia jasa Rekayasa (Perancangan proses kimia, pengadaan peralatan pabrik, pengadaan bahan konstruksi, pembangunan pabrik kimia) Instansi Pemerintah instansi Pendidikan Instansi / lembaga penelitian BankWirausaha.",
-    gaji:"Rp. 10.000.000,00"
+    ilmu:"Teknik Kimia merupakan bidang studi yang berfokus pada perancangan serta pengelolaan berbagai proses industri, mulai dari pabrik kimia, bioteknologi, hingga industri pangan. Mahasiswa dalam program ini diajarkan untuk merancang alur kerja di pabrik, seperti reaksi dalam reaktor, pemanfaatan bahan baku, dan sistem pengendalian proses. Selain itu, mereka juga mempelajari strategi untuk meningkatkan efisiensi proses kimia maupun biologis, baik di lingkungan pabrik maupun di luar, sehingga produk dapat dihasilkan dengan lebih cepat dan optimal. Penerapan ilmu ini dapat dilihat pada proses fermentasi untuk menghasilkan yoghurt, roti, dan kecap, serta pada pengolahan minyak bumi dan gas alam menjadi bensin, solar, dan bahan bakar nabati (biofuel).",
+    prospekKerja:"Industri Proses Kimia (misal Industri pupuk, pengolahan minyak bumi, kertas, polimer, gas, logam, makanan, obat-obatan, dll) Pabrik Pengelolaan Proses Kimia jasa Rekayasa (Perancangan proses kimia, pengadaan peralatan pabrik, pengadaan bahan konstruksi, pembangunan pabrik kimia) Instansi Pemerintah instansi Pendidikan Instansi / lembaga penelitian Bank Wirausaha.",
+    gaji:"Range rata-rata: 8.500.000,00 - 11.700.000,00"
   },
   {
     id:2,
     name:"Teknik Fisika",
     himpunan:"Himpunan Mahasiswa Fisika Teknik ITB (HMFT-ITB)",
-    ilmu:"Perkembangan teknologi yang pesat mendorong hadirnya program studi Teknik Fisika sebagai respons terhadap kemajuan teknologi. Program ini, yang tergabung dalam Fakultas Teknologi Industri (FTI) ITB, menggabungkan ilmu fisika, matematika, biologi, dan rekayasa. Teknik Fisika berfungsi sebagai jembatan antara ilmu rekayasa dan sains, dengan fokus untuk memahami alam dan menerjemahkannya ke dalam bahasa matematika yang dapat diaplikasikan dalam teknologi terapan.",
-    prospekKerja:"Prospek bidang kerja bagi para lulusan atau sarjana Teknik Fisika antara lain sebagai insinyur profesional dalam bidang instrumentasi, bidang tata udara, tata cahaya dan suara, bidang rekayasa sistem dan teknologi informasi dan sebagainya di industri proses, konsultan / kontraktor, perusahaan-perusahaan rekayasa (engineering companies), di dalam negeri maupun di luar negeri.",
-    gaji:"Rp. 9.146.534,00"
+    ilmu:"Teknik Fisika adalah ilmu yang mempelajari penerapan prinsip-prinsip fisika, matematika, biologi, dan rekayasa untuk memahami fenomena alam serta mengubahnya menjadi model matematis yang dapat digunakan dalam teknologi terapan. Program studi ini berfungsi sebagai penghubung antara sains dasar dan ilmu rekayasa, dengan tujuan menghasilkan solusi inovatif yang mendukung perkembangan industri dan teknologi modern.",
+    prospekKerja:"Prospek bidang kerja bagi para lulusan atau sarjana Teknik Fisika antara lain sebagai insinyur profesional dalam bidang instrumentasi, bidang tata udara, tata cahaya dan suara, bidang rekayasa sistem dan teknologi informasi dan sebagainya di industri proses, konsultan/kontraktor, perusahaan-perusahaan rekayasa (engineering companies), di dalam negeri maupun di luar negeri.",
+    gaji:"Range rata-rata: 6.800.000,00 - 10.300.000,00"
   },
   {
     id:3,
     name:"Teknik Pangan",
     himpunan:"Himpunan Mahasiswa Teknik Pangan ITB (HMPG ITB)",
-    ilmu:"Teknik Pangan adalah sub-keilmuan yang mempelajari bidang teknologi pengolahan pangan sehingga para lulusan-nya diharapkan dapat memformulasikan masalah-masalah yang berhubungan dengan pemrosesan dan pengolahan pangan pada skala industri, memiliki pengetahuan tentang komponen pangan khas Indonesia, serta mengetahui pangan tandingan yang berasal dari dalam negeri.",
+    ilmu:"Teknik Pangan adalah ilmu yang mempelajari teknologi pengolahan dan pemrosesan bahan pangan pada skala industri. Dalam bidang ini, mahasiswa dilatih untuk merumuskan dan menyelesaikan berbagai persoalan terkait produksi pangan, memahami karakteristik komponen pangan khas Indonesia, serta mengembangkan alternatif pangan lokal sebagai solusi untuk kebutuhan masyarakat.",
     prospekKerja:"Bidang pengembangan produk pangan dan proses produksi pangan baru, Bidang ekspansi pasar atau pembukaan jaringan distribusi industri pangan baru, Penerapan sistem pemrosesan pangan dengan standar mutu, penerapan sistem food safety.",
-    gaji:"Rp. 9.200.000,00"
+    gaji:"Range rata-rata: 7.400.000,00 - 10.200.000,00"
   },
   {
     id:4,
-    name:"Teknik Bioenergi & kemurgi",
+    name:"Teknik Bioenergi & Kemurgi",
     himpunan:"Himpunan Mahasiswa Teknik Bioenergi dan Kemurgi ITB (HMTB “RINUVA” ITB)",
-    ilmu:"Teknik Bioenergi dan Kemurgi adalah sub-keilmuan yang mempelajari pemrosesan dan pengolahan bahan nabati menjadi produk non-pangan pada skala industri. Bidang ini fokus pada penciptaan sumber energi baru dan energi terbarukan, serta pemanfaatan kekayaan alam Indonesia secara efisien dan efektif. Selain itu, Teknik Bioenergi dan Kemurgi juga mencakup produksi biofuel seperti bioetanol, biodiesel, biogas, dan jet biofuel, serta pengembangan kemurgi yang berkaitan dengan produksi non-pangan dan bioenergi dari biomassa atau bahan terbarukan. Bidang ini juga mempelajari teknologi untuk memproduksi bahan kimia non-pangan, seperti minyak atsiri, bahan baku kosmetik, dan turunan biomassa lainnya.",
+    ilmu:"Teknik Bioenergi dan Kemurgi adalah ilmu yang mempelajari pemrosesan serta pengolahan bahan nabati menjadi produk non-pangan dalam skala industri. Bidang ini berfokus pada pengembangan sumber energi baru dan energi terbarukan, sekaligus pemanfaatan potensi alam Indonesia secara efisien dan berkelanjutan. Cakupan pembelajarannya meliputi produksi berbagai jenis biofuel, seperti bioetanol, biodiesel, biogas, dan jet biofuel, serta pengembangan kemurgi untuk menghasilkan produk non-pangan dan bioenergi dari biomassa maupun bahan terbarukan. Selain itu, Teknik Bioenergi dan Kemurgi juga menelaah teknologi produksi bahan kimia non-pangan, termasuk minyak atsiri, bahan baku kosmetik, serta berbagai turunan biomassa lainnya.",
     prospekKerja:"Bidang produksi energi alternatif, Bidang teknologi pasca panen, Bidang riset bioenergi.",
-    gaji:"Rp. 8.000.000,00"
+    gaji:"Range rata-rata: 6.500.000,00 - 9.300.000,00"
   },
   {
     id:5,
     name:"Teknik Industri",
     himpunan:"Keluarga Mahasiswa Teknik Industri ITB (MTI ITB)",
-    ilmu:"Teknik Industri berfokus pada perancangan sistem terintegrasi yang melibatkan manusia, mesin, material, energi, dan informasi. Tujuan utamanya adalah mengoptimalkan EFEKTIVITAS, EFISIENSI, dan PRODUKTIVITAS dalam berbagai sistem, seperti pabrik, bank, dan rumah sakit. TI juga mempelajari manajemen, ekonomi, dan psikologi industri untuk mengelola aspek manusia dalam sistem. Pengajaran di TI melibatkan proyek-proyek praktis yangmenggabungkan aspek teknis dan non-teknis.",
+    ilmu:"Teknik Industri adalah ilmu yang mempelajari perancangan dan pengelolaan sistem terintegrasi yang melibatkan manusia, mesin, material, energi, serta informasi. Bidang ini bertujuan untuk meningkatkan efektivitas, efisiensi, dan produktivitas dalam berbagai sektor, mulai dari pabrik, perbankan, hingga layanan kesehatan. Selain aspek teknis, Teknik Industri juga menekankan pemahaman tentang manajemen, ekonomi, dan psikologi industri guna mengoptimalkan peran manusia dalam sistem. Proses pembelajaran di program studi ini dilengkapi dengan proyek-proyek praktis yang menggabungkan pendekatan teknis dan non-teknis untuk menghasilkan solusi yang baik.",
     prospekKerja:"Bidang produksi/operasi dan penjamin mutu, Bidang sistem informasi, Bidang pemasaran, Bidang logistik, Bidang manajemen sumber daya manusia, Bidang keuangan (bank dan asuransi), Bidang konsultasi manajemen",
-    gaji:"Rp. 10.399.310,00"
+    gaji:"Range rata-rata: 9.100.000,00 - 12.700.000,00"
   },
   {
     id:6,
     name:"Manajemen Rekayasa",  
     himpunan:"Keluarga Mahasiswa Teknik Industri ITB (MTI ITB)",
-    ilmu:"Manajemen Rekayasa Industri (MRI) menggabungkan ilmu rekayasa dengan keahlian manajemen untuk memimpin tim dalam menyelesaikan masalah pembaharuan sistem dalam organisasi. Manajemen Rekayasa Mengajarkan bahwa Seorang engineer bukan hanya berfokus pada peran teknis, tetapi juga dapat berperan sebagai manajer proyek, penjual teknis, dan insinyur sistem yang melibatkan perancangan, integrasi, pemasaran, dan pengujian sistem teknologi.",
+    ilmu:"Manajemen Rekayasa Industri adalah ilmu yang mempelajari integrasi antara prinsip-prinsip rekayasa dan keahlian manajemen untuk mengelola serta memperbarui sistem dalam suatu organisasi. Bidang ini mengajarkan bahwa seorang engineer tidak hanya berperan dalam aspek teknis, tetapi juga dapat bertindak sebagai manajer proyek, tenaga penjualan teknis, maupun insinyur sistem. Bidang ini meliputi perancangan, integrasi, pemasaran, hingga pengujian sistem teknologi, sehingga lulusan diharapkan mampu memimpin tim dan menghadirkan solusi yang efektif bagi berbagai tantangan industri.",
     prospekKerja:"Manajer proyek, Konsultan manajemen, Spesialis rantai pasok, Analis bisnis, Manajer produksi, Spesialis manajemen operasi, Spesialis kualitas, Manajer teknologi informasi, Pengembangan produk.",
-    gaji:"Rp. 11.600.00,00"
+    gaji:"Range rata-rata: 9.500.000,00 - 13.000.000,00"
   },
 ]
