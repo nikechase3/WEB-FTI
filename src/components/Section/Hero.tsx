@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 
-export default function HeroSection({featureRef} : {featureRef : React.RefObject<HTMLElement | null>}) {
+export default function HeroSection() {
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({
       target: ref,

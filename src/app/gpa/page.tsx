@@ -33,22 +33,7 @@ import { Badge } from "@/components/ui/badge"
 
 type Grade = "A" | "AB" | "B" | "BC" | "C" | "D" | "E"
 
-const gradePoints : {[key : string] : number} = {
-    A : 4.0,
-    AB: 3.5,
-    B: 3.0,
-    BC: 2.5,
-    C: 2.0,
-    D: 1.0,
-    E: 0.0,
-}; 
 
-interface Course {
-  id: string
-  name: string
-  credits: number
-  grade?: Grade;
-}
 
 /* ================= GRADE SCALE ================= */
 
@@ -63,6 +48,14 @@ const gradePoints: Record<Grade, number> = {
 }
 
 const gradeOptions = Object.keys(gradePoints) as Grade[]
+
+/* ================= INTERFACES ================= */
+interface Course {
+  id: string
+  name: string
+  credits: number
+  grade?: Grade
+}
 
 /* ================= COMPONENT ================= */
 
