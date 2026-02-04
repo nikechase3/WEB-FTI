@@ -32,7 +32,7 @@ export default function Navigation(){
     },
     {
         name:"Calendar", href:"/calendar"
-    },
+    }
     ]
     
 
