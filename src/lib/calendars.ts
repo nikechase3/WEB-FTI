@@ -33,5 +33,8 @@ export const calendars: CalendarConfig[] = [
   {id: 'TEKNIK INDUSTRI(C)',
     name: 'TEKNIK INDUSTRI(C)',
     embedUrl:
-      'https://calendar.google.com/calendar/embed?src=c_e1221f1888d50b6b6bf8c1906ef35fd1228ece31b29ded1e7a8da0ee34acc062%40group.calendar.google.com&ctz=Asia%2FBangkok',}
+      'https://calendar.google.com/calendar/embed?src=c_e1221f1888d50b6b6bf8c1906ef35fd1228ece31b29ded1e7a8da0ee34acc062%40group.calendar.google.com&ctz=Asia%2FBangkok',},
+  {id: 'TEKNIK FISIKA',
+  name: 'TEKNIK FISIKA',
+  embedUrl: 'https://calendar.google.com/calendar/embed?src=c_1b01e6565a403c80406deea03cb6fd698ef082816de17ed9e902657617f4e9a8%40group.calendar.google.com&ctz=Asia%2FBangkok',},
 ];
