@@ -8,6 +8,7 @@ const FOOTER_LINKS = {
     { label: "Kalkulator IP / IPK", href: "/gpa" },
     { label: "Layanan Akademik", href: "/services" },
     { label: "Survei FTI", href: "/survei" },
+    { label: "Calendar", href: "/calendar"},
   ],
   Resources: [
     { label: "Website ITB", href: "https://itb.ac.id/" },
