@@ -31,7 +31,7 @@ export default function Navigation(){
         name:"Organogram", href:"/organogram"
     },
     {
-        name:"Calendar, href:"/calendar""}
+        name:"Calendar, href:"/calendar"}
     ]
     
 
