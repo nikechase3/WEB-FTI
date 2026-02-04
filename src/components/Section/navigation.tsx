@@ -45,7 +45,7 @@ export default function Navigation(){
 
     return (
         <>
-        <nav className="hidden md:flex fixed top-4 mx-auto max-w-5xl inset-x-0 bg-white/50 shadow-lg backdrop-lg rounded-full z-50 px-8 py-2 items-center justify-between ">
+        <nav className="hidden md:flex fixed top-4 mx-auto max-w-5xl inset-x-0 bg-gray-700/50 dark:bg-white/50 shadow-lg backdrop-blur-lg rounded-full z-50 px-8 py-2 items-center justify-between ">
 
             <ul className="hidden md:flex items-center justify-between space-x-6">
                 {items.map ((item, index) => (

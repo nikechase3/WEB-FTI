@@ -52,7 +52,7 @@ export const Box = ({image, title, subtitle, button, kode, id}: forbox) => {
     return(
         <div style={{
             padding: '10px',
-            backgroundColor: theme === 'dark' ? '#d8d8d8ff' : '#111827',
+            backgroundColor: theme === 'dark' ? '#262626' : '#d8d8d8ff',
             display: 'flex',
             flexDirection: 'column', 
             borderRadius: '10px',
@@ -60,7 +60,7 @@ export const Box = ({image, title, subtitle, button, kode, id}: forbox) => {
             width: '100%',
         }}>
             <img className = "w-full h-48 object-cover object-top"src = {image}/>
-            <h1 className = "text-white dark:text-black text-lg text-left mt-2">{kode} {title}</h1>
+            <h1 className = "text-black dark:text-white text-lg text-left mt-2">{kode} {title}</h1>
             <h1 className = "text-gray-500 text-sm text-left">{subtitle}</h1>
             <a href={button} className = "px-8 py-2 rounded-sm text-black bg-blue-600 w-full text-center text-bold mt-auto">Enter</a>
         </div>

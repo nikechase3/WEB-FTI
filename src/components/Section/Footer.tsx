@@ -60,7 +60,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-neutral-50 border-t">
+    <footer id="footer" className="bg-neutral-50 dark:bg-neutral-800 border-t">
       <div className="mx-auto max-w-7xl px-6 py-16">
 
         {/* TOP SECTION */}
@@ -68,11 +68,11 @@ export default function Footer() {
 
           {/* LEFT: Brand */}
           <div className="max-w-sm">
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 dark:text-white">
               FTI Academic Hub
             </h3>
 
-            <p className="text-sm text-neutral-600 mb-6">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6">
               Platform terpusat untuk kebutuhan akademik mahasiswa FTI.
             </p>
 
@@ -119,7 +119,7 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h4 className="mb-4 text-sm font-semibold text-neutral-900">
+      <h4 className="mb-4 text-sm font-semibold text-neutral-900 dark:text-white">
         {title}
       </h4>
 
@@ -128,7 +128,7 @@ function FooterColumn({
           <li key={link.label}>
             <a
               href={link.href}
-              className="text-sm text-neutral-600 hover:text-neutral-900 transition"
+              className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 transition"
             >
               {link.label}
             </a>

@@ -227,20 +227,20 @@ export default function Page() {
 
   return (
     <>
-      <div className = "pt-21">
-        <h1 className="text-center text-5xl font-bold">Materi</h1>
+      <div className = "min-h-screen pt-24 bg-gray-50 dark:bg-neutral-900">
+        <h1 className="text-center text-5xl font-bold dark:text-white">Materi</h1>
         <div className = "bg-gray-300 dark:bg-gray-800 w-100% rounded-lg m-4 p-4">
-            <h1>Filter</h1>
-            <select className = "p-3 rounded-lg border" name ="jurusan" id = "jurusan" value={Jurusan}
+            <h1 className = "dark:text-white">Filter</h1>
+            <select className = "p-3 rounded-lg border border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" name ="jurusan" id = "jurusan" value={Jurusan}
             onChange={(e) => pilJurusan(e.target.value)}>
-            <option className = "bg-blue-500" value = "def">Pilih jurusan</option>
-            <option className = "bg-blue-700" value = "FT">Tahap Tahun Pertama FTI</option>
-            <option className = "bg-blue-400" value = "TF">Teknik Fisika</option>
-            <option className = "bg-blue-700" value = "TK">Teknik Kimia</option>
-            <option className = "bg-blue-400" value = "TI">Teknik Industri</option>
-            <option className = "bg-blue-700" value = "MR">Manajemen Rekayasa</option>
-            <option className = "bg-blue-400" value = "TB">Teknik Bioenergi dan Kemurgi</option>
-            <option className = "bg-blue-700" value = "TP">Teknik Pangan</option>
+            <option value = "def">Pilih jurusan</option>
+            <option value = "FT">Tahap Tahun Pertama FTI</option>
+            <option value = "TF">Teknik Fisika</option>
+            <option value = "TK">Teknik Kimia</option>
+            <option value = "TI">Teknik Industri</option>
+            <option value = "MR">Manajemen Rekayasa</option>
+            <option value = "TB">Teknik Bioenergi dan Kemurgi</option>
+            <option value = "TP">Teknik Pangan</option>
             </select>
         </div>
         <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
