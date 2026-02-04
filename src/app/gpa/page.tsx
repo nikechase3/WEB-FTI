@@ -580,7 +580,7 @@ export default function calculatorGrade () {
                                 </TableBody>
                                 </Table>
                                 <Button className="w-full mt-2" onClick={addCourse} variant="outline">
-                                <Plus className="h-4 w-4 mr-2"/> Tambah Matkul S2
+                                <Plus className="h-4 w-4 mr-2"/> Tambah Matkul Semester 2
                                 </Button>
                             </div>
                             </CardContent>
@@ -608,7 +608,7 @@ export default function calculatorGrade () {
 
                                         {/* Box 3: TOTAL (IPK) */}
                                         <div className="p-4 bg-primary/13 dark:bg-primary/20 rounded-lg border border-primary/30">
-                                            <p className="text-sm font-bold text-primary">IP Kumulatif (S1 + S2)</p>
+                                            <p className="text-sm font-bold text-primary">IP Kumulatif (Semester 1 + Semester 2)</p>
                                             <p className={`text-3xl font-black ${getGPAColor(cumulativeGPA)}`}>
                                                 {cumulativeGPA.toFixed(2)}
                                             </p>
