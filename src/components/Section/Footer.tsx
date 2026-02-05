@@ -128,7 +128,10 @@ function FooterColumn({
           <li key={link.label}>
             <a
               href={link.href}
-              className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 transition"
+              className="underline
+  underline-offset-4
+  hover:text-blue-600
+  dark:hover:text-blue-400"
             >
               {link.label}
             </a>
