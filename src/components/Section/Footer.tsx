@@ -43,7 +43,7 @@ const SOCIAL_LINKS = [
   },
   {
     icon: FaLine,
-    href: "mailto:admin.fti@example.ac.id",
+    href: "https://line.me/R/ti/p/@nanaaal",
     label: "Line",
   },
   {    
@@ -53,7 +53,7 @@ const SOCIAL_LINKS = [
   }, 
   {
     icon: FaWhatsapp,
-    href: "https://wa.me/6281234567890", 
+    href: "https://wa.me/62895365954982", 
     label: "WhatsApp",
   }, 
 ];
