@@ -72,11 +72,11 @@ export default function Footer() {
               FTI Academic Hub
             </h3>
 
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6 dark:text-neutral-400">
               Platform terpusat untuk kebutuhan akademik mahasiswa FTI.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex gap-5">
               {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -86,7 +86,7 @@ export default function Footer() {
                   aria-label={label}
                   className="text-neutral-500 hover:text-neutral-900 transition"
                 >
-                  <Icon className="h-5 w-5" />
+                  <Icon className="h-7 w-7" />
                 </a>
               ))}
             </div>
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="mt-16 border-t pt-6 text-sm text-neutral-500">
+        <div className="mt-16 border-t pt-6 text-sm text-neutral-500 dark:text-neutral-400 text-center">
           © {new Date().getFullYear()} FTI Academic Hub. All rights reserved.
         </div>
       </div>
@@ -128,10 +128,7 @@ function FooterColumn({
           <li key={link.label}>
             <a
               href={link.href}
-              className="underline
-  underline-offset-4
-  hover:text-blue-600
-  dark:hover:text-blue-400"
+              className="underline underline-offset-4 hover:text-blue-600 dark:hover:text-blue-400 dark:text-neutral-300 transition"
             >
               {link.label}
             </a>
