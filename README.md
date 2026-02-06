@@ -16,4 +16,8 @@ Website ini merupakan platform terpadu untuk mahasiswa dalam mengakses berbagai 
 
 ## Pengembang
 - Aria Aura Rachman
+- Bertrand Aurey Justinian
+- Jonathan Diego Susanto
+- Haikal Danendra Asa
+- Jonathan Diego Susanto
 
