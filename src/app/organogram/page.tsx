@@ -175,12 +175,12 @@ export default function Page() {
                     <div className ="flex flex-row">
                         <div className="flex flex-nowrap gap-4 overflow-x-auto pb-4 px-4 snap-x snap-mandatory">
                             <Profile
-                                image = "https://b.fssta.com/uploads/application/soccer/headshots/2091.vresize.350.350.medium.1.png"
+                                image = ""
                                 title = "Fazil Sabilarrasyad"
                                 subtitle = "Ketua Divisi"
                             />
                             <Profile
-                                image = "https://b.fssta.com/uploads/application/soccer/headshots/2091.vresize.350.350.medium.1.png"
+                                image = ""
                                 title = "Muhammad Kaisar Raya"
                                 subtitle = "Wakil Ketua Divisi"
                             />        
