@@ -41,13 +41,13 @@ export default function AboutUs(){
       }
 
     return (
-        <div className="min-h-screen bg-linear-to-t from-sky-400">
+        <div className="min-h-screen bg-linear-to-t from-sky-400 dark:bg-gradient-to-b dark:from-neutral-900 dark:via-black dark:to-neutral-900">
             {/* Carousel */}
             <section className="py-16 lg:py-20 px-4">
                     <ImageCarousel/>
             </section>
 
-            <section ref={sectionRef} className=" lg:block max-w-sceren-xl mx-auto px-4 "> 
+            <section ref={sectionRef} className=" lg:block max-w-sceren-xl mx-auto px-4 dark:text-cyan-400"> 
                     <motion.div className="text-center mb-8"
                         whileInView={{opacity: 1, y:0}}
                         initial={{opacity:0, y:100}}
@@ -59,7 +59,7 @@ export default function AboutUs(){
                         whileInView={{opacity: 1, y:0}}
                         initial={{opacity:0, y:100}}
                         transition={{ease:"easeInOut", duration: 0.7}}>
-                            <Image src={"/fti4.png"} height={400} width={400} alt="fti24" className="rounded-lg shadow-lg object-cover" />
+                            <Image src={"/fti4.png"} height={400} width={400} alt="fti25" className="rounded-lg shadow-lg object-cover" />
                         </motion.div>
                         <motion.div 
                         whileInView={{opacity: 1, y:0}}
@@ -148,7 +148,7 @@ export default function AboutUs(){
                             </div>
                             <Reveal text="KEGIATAN"
                             delay={0.5}
-                            className="text-4xl md:text-6xl font-bold items-center tracking-wider"/>
+                            className="text-4xl md:text-6xl font-bold items-center tracking-wider dark:text-cyan-400"/>
                         </div>
                     </div>
 
